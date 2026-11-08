@@ -1,0 +1,41 @@
+Metadata-Version: 2.4
+Name: glenride-game-bot
+Version: 0.1.0
+Summary: Telegram romance simulation game bot
+Author: Glenride
+License-Expression: LicenseRef-Proprietary
+Requires-Python: >=3.11
+Description-Content-Type: text/markdown
+Requires-Dist: python-telegram-bot==21.4
+Requires-Dist: pydantic<3.0,>=2.8
+Requires-Dist: httpx<0.28,>=0.27
+Provides-Extra: dev
+Requires-Dist: ruff<0.7.0,>=0.6.3; extra == "dev"
+Requires-Dist: pytest<9.0,>=8.3; extra == "dev"
+Requires-Dist: pytest-asyncio<0.24,>=0.23; extra == "dev"
+
+# Glenride Telegram Romance Simulation Bot
+
+## Overview
+Interactive fiction Telegram bot set in a futuristic neon city where players balance love, temptation, and career choices through inline keyboards.
+
+## Tech Stack & Patterns
+- **Language:** Python 3.13+
+- **Framework:** `python-telegram-bot` for update handling
+- **State & Validation:** Custom persistence layer with `pydantic` models
+- **HTTP Utilities:** `httpx` for outbound calls (payments, analytics)
+- **Testing:** `pytest`
+- **Linting/Formatting:** `ruff`
+- **Packaging:** PEP 621 (`pyproject.toml`) with editable installs
+- **Content Storage:** JSON scene files under `content/scenes/`
+- **Configuration:** Environment-specific settings + optional banned-word list in `config/`
+
+## Repo Structure
+```
+bot/                # Application modules (handlers, state, payments, analytics)
+content/scenes/     # Authored narrative data
+config/             # Supplemental config assets (e.g., banned words)
+tests/              # Automated test suites
+pyproject.toml      # Project metadata & dependencies
+README.md           # Patterns & stack reference
+```

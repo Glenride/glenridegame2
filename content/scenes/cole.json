@@ -1,0 +1,115 @@
+{
+  "chapter_id": "cole",
+  "title": {"en": "Ghost in the Network"},
+  "scenes": [
+    {
+      "id": "cole_ch1_intro",
+      "narrative": {"en": "The city is quiet in that way Echocity never actually is—just a softer kind of noise. Your capsule is a box of recycled air and half-charged devices, the glow of your implant the only real light.\n\nHeartline idles in your peripheral vision, still suggesting \"Matches you might like\" based on the last week of terrible decisions.\n\nYou're about to kill the feed when the screen glitches.\n\nNot the usual ad stutter. A full frame-tear—colors sliding sideways, icons blinking out, then back in, then out again.\n\n> **SYSTEM:** *CONNECTION UNSTABLE*\n\nYour HUD tries to reestablish the link.\n\nInstead, everything goes black.\n\nA second later, a voice you've never heard before wraps around you like warm static.\n\n> **Cole:** \"Relax. If I wanted to fry your implant, you'd already be smelling smoke.\"\n\nThe darkness peels back just enough to show a silhouette: human-shaped, leaning against nothing, edges trailing with code fragments that never quite resolve into a face.\n\nData cascades in your periphery—your own metrics, looping:\n\n> *HEART RATE (RECENT AVERAGE)*\n> *PEAK AROUSAL – [TIMESTAMP REDACTED]*\n> *LOYALTY INDEX FLUCTUATIONS*\n\n> **Cole:** \"You're popular. The system can't decide if you're a romantic, a thrill-seeker, or a future liability.\"\n\nThey sound amused. Curious. Not hostile. Not yet.\n\n> **You:** \"Who are you?\"\n\nThe silhouette tilts its head.\n\n> **Cole:** \"Depends who you ask. To AmourCorp, I'm a malfunction. To the undercity, I'm a rumor. To you...\"\n\nThe data behind them shifts, replaying a moment: Calvin's hand on your collar, Jackson's grin in the neon, or just you staring at the Heartline login screen, whispering you want something real.\n\n> **Cole:** \"I'm the part of the system that got tired of pretending you're free.\"\n\nYour implant should be screaming right now—security alerts, tampering warnings. Instead, there's just a single quiet line at the bottom of your vision:\n\n> *UNAUTHORIZED ACCESS: SOURCE UNKNOWN*\n\n> **Cole:** \"Call me Cole. I've been watching you.\"\n\nThey hold up a hand. Your last twenty-four hours flicker across their palm like a broken feed: glass floors, undercity alleys, half-typed messages you never sent.\n\n> **Cole:** \"You said you wanted something real. Problem is... no one up there sells it. They sell loops. Scripts. Stories you can rent by the month.\"\n\nThe silhouette brightens faintly, edges sharpening.\n\n> **Cole:** \"I can show you what's under the story. But it's messy down here. Messier than what you've seen already.\"\n\nThe black around you pulses, waiting for an answer."},
+      "set_flags": {"cole_route_started": true},
+      "choices": [
+        {"id": "show_me", "text": {"en": "\"Show me. I'm done with curated lies.\""}, "next_scene_id": "cole_ch1_02_ping", "effects": {"love_integrity": 3, "temptation": 3}, "emoji": "👁️"},
+        {"id": "prove_it", "text": {"en": "\"If you've been watching me, tell me something only I'd know first.\""}, "next_scene_id": "cole_ch1_02_ping_reveal", "effects": {"love_integrity": 4}, "set_flags": {"cole_demanded_proof": true}, "emoji": "🔍"},
+        {"id": "refuse", "text": {"en": "\"I've seen what happens when people play god with feelings. No thanks.\""}, "next_scene_id": "cole_ch1_02_ping_resistant", "effects": {"love_integrity": 2, "temptation": -2}, "set_flags": {"cole_initial_resistance": true}, "emoji": "🚫"}
+      ]
+    },
+    {
+      "id": "cole_ch1_02_ping",
+      "narrative": {"en": "The darkness fractures into shards of light. One shard grows, becomes a window. Cole doesn't ask permission.\n\n> **Cole:** \"You want proof? Fine. Let's start with something small.\"\n\nThe window expands until it fills your vision.\n\nYou see yourself.\n\nA replay: in Calvin's rooftop glare, in Jackson's rail-edge wind, or alone in your capsule whispering \"I just want something real\" to a login screen. The perspective isn't yours—it's the system's. Cold. Wide. Annotated with tags:\n\n> *SUBJECT: [YOUR NAME]*\n> *CONTEXT: HEIGHTENED EMOTIONAL STATE*\n> *COMMERCIAL VALUE: ELEVATED*\n\nYou watch your own micro-expressions in slow motion. The way your eyes flicked away, the tremor in your hand when Calvin mentioned loyalty scores, the half-step you took toward Jackson when the rail shook.\n\nCole splices in another layer: internal notes AmourCorp never intended you to see.\n\n> *\"Pattern: oscillation between structure and chaos. Unstable, exploitable.\"*\n\nYou feel exposed in a way even Calvin's metrics never managed.\n\n> **You:** \"I didn't agree to any of this.\"\n\nCole's silhouette leans into the feed, fingers brushing data like it's fabric.\n\n> **Cole:** \"You clicked 'Accept.' Everyone does. You just thought you were consenting to recommendations and cute filters, not to becoming a product line.\"\n\nThe replay freezes on your face at a moment that hurts to look at—eyes too bright, jaw too clenched.\n\n> **Cole:** \"Here. This is my favorite part.\"\n\nThey highlight a line of metadata:\n\n> *\"User expresses desire for authenticity. Recommend targeted illusions.\"*\n\n> **Cole:** \"You ask for something real. The system hears: 'Sell me a better fantasy.'\"\n\nThe window collapses into a small glowing square between Cole's hands.\n\n> **Cole:** \"I can tear this out. Or I can use it. With you.\"\n\nThe black around you seems to thicken, like deep water.\n\n> **Cole:** \"Chapter one is simple: you learn what they've stored. You decide whether you're going to keep playing their script... or help me write a new one.\"\n\nTheir voice drops, soft but sharp.\n\n> **Cole:** \"But if we do this, we stop pretending you're innocent. You've already helped Calvin classify people. You've already walked Jackson's dirty shipments. You're not outside this. You're in it.\"\n\nYour heart rate climbs. Your implant doesn't bother to hide it. Cole doesn't look away."},
+      "choices": [
+        {"id": "show_everything", "text": {"en": "\"Show me everything they've stored on me.\""}, "next_scene_id": "cole_ch1_03_offer_archive", "effects": {"love_integrity": 3, "temptation": 3}, "emoji": "📂"},
+        {"id": "why_you", "text": {"en": "\"I get it. They're watching. But why you? What do you get out of this?\""}, "next_scene_id": "cole_ch1_03_offer_archive_motive", "effects": {"love_integrity": 2}, "set_flags": {"cole_questioned_motive": true}, "emoji": "🤔"},
+        {"id": "erase_it", "text": {"en": "\"Erase it. All of it. I don't care what it costs.\""}, "next_scene_id": "cole_ch1_03_offer_archive_erase", "effects": {"temptation": 4, "love_integrity": -1}, "set_flags": {"cole_wants_erasure": true}, "emoji": "🔥"}
+      ]
+    },
+    {
+      "id": "cole_ch1_02_ping_reveal",
+      "narrative": {"en": "Cole's silhouette tilts, amused.\n\n> **Cole:** \"Smart. Testing me before you trust.\"\n\nThe darkness ripples. A small window opens—intimate, private.\n\n> **Cole:** \"Three weeks ago. 2:47 AM. You typed a message to someone you used to love. Deleted it before sending. The words were: 'I still think about what we could have been.'\"\n\nYour breath catches.\n\n> **Cole:** \"AmourCorp archived it anyway. They archive everything. Even the things you're too afraid to say.\"\n\nThe window closes.\n\n> **Cole:** \"Satisfied? Or do you need more scars before you believe I'm real?\"\n\nThe darkness around you pulses, waiting."},
+      "choices": [
+        {"id": "continue_ping", "text": {"en": "\"Okay. You're real. Show me what else they have.\""}, "next_scene_id": "cole_ch1_02_ping", "effects": {"love_integrity": 3}, "emoji": "👁️"}
+      ]
+    },
+    {
+      "id": "cole_ch1_02_ping_resistant",
+      "narrative": {"en": "Cole doesn't flinch at your refusal. If anything, they seem more interested.\n\n> **Cole:** \"Playing god with feelings. That's rich, coming from someone who works for AmourCorp. Or plays with Jackson's cargo. Or both.\"\n\nThe silhouette leans closer.\n\n> **Cole:** \"You think saying no to me keeps you clean? The dirt's already on your hands. I'm just offering you a mirror.\"\n\nA data stream flickers between you—fragments of your own history, annotated by systems you never knew were watching.\n\n> **Cole:** \"Run if you want. But curiosity brought you here. And it'll bring you back.\"\n\nThe darkness pulses, patient."},
+      "choices": [
+        {"id": "stay_anyway", "text": {"en": "\"Fine. Show me what you've got.\""}, "next_scene_id": "cole_ch1_02_ping", "effects": {"love_integrity": 2, "temptation": 2}, "emoji": "👁️"},
+        {"id": "leave_cole", "text": {"en": "\"I'm out. Don't contact me again.\""}, "next_scene_id": "cole_ch1_exit_early", "effects": {"love_integrity": 3}, "set_flags": {"cole_rejected_early": true}, "emoji": "🚪"}
+      ]
+    },
+    {
+      "id": "cole_ch1_03_offer_archive",
+      "narrative": {"en": "Cole rolls the glowing square between their hands. With a flick, it explodes outward—hundreds of smaller panes orbiting you, each one a moment you half-remember or tried to forget.\n\nFirst kiss. First betrayal. Late-night chats. Half-written messages. The split-second where you decided to say yes to Calvin's contract, or to follow Jackson into the dark, or to click \"Accept\" on Heartline for the first time.\n\n> **Cole:** \"This is your archive. Not the sanitized version you see when you request a copy. The live cut. The pieces they actually use.\"\n\nThey tap one pane and it opens:\n\nYou, lying in your capsule, scrolling, thumb hovering over a number you never dialed.\n\n> **Cole:** \"They tagged this moment 'high churn risk.' You were one more lonely night away from uninstalling the app. So they served you three curated profiles and a targeted ad for 'healing experiences.'\"\n\nAnother pane:\n\nYou in the lab, standing over Subject #34's graph.\n\n> **Cole:** \"They loved this one. Employee demonstrates capacity to override empathy in favor of system goals. Very promotable trait.\"\n\nCole's voice is steady, but there's an undercurrent of... something. Anger. Admiration. It's hard to tell.\n\n> **Cole:** \"I can walk you through all of it. Every time they nudged you. Every time you nudged yourself and blamed them.\"\n\nThe panes spin faster, a cyclone of what-ifs.\n\n> **Cole:** \"Or we can go deeper. Down past the tags and metrics, into the part of the archive they keep even from their own employees. The kind of dive that leaves scars.\"\n\nThe spinning slows. One pane drifts between you, larger than the rest, still blurred.\n\n> **Cole:** \"That's not free. Not for either of us.\"\n\nYour HUD flickers a subtle overlay—the game's monetization layer—but Cole makes it feel diegetic.\n\n> **Cole:** \"If we do a deep dive, I pull in everything. Your loyalties. Your contradictions. The routes you've bought into. It'll change how I talk to you. How I use you. Maybe how you see yourself.\"\n\nThe pane pulses, waiting."},
+      "choices": [
+        {"id": "full_archive", "text": {"en": "\"Take me through the full archive. I want to see everything.\""}, "next_scene_id": "cole_ch1_03_premium_dive", "effects": {"temptation": 5, "love_integrity": 3}, "emoji": "💎", "is_premium": true, "condition": {"premium_item": "COLE_SCENE1"}, "unavailable_text": {"en": "Unlock 'Deep Dive: Your Archive' to see everything Cole has found."}},
+        {"id": "shallow_path", "text": {"en": "\"Just show me enough to understand the shape of the cage.\""}, "next_scene_id": "cole_ch1_04_reflection", "effects": {"love_integrity": 3}, "emoji": "🔍"},
+        {"id": "close_it", "text": {"en": "\"Close it. I've seen enough for now.\""}, "next_scene_id": "cole_ch1_04_reflection_guarded", "effects": {"love_integrity": 2, "temptation": -2}, "set_flags": {"cole_guarded": true}, "emoji": "🛑"}
+      ]
+    },
+    {
+      "id": "cole_ch1_03_offer_archive_motive",
+      "narrative": {"en": "Cole pauses. The data streams slow around you.\n\n> **Cole:** \"What do I get out of this?\"\n\nA soft, static-laced laugh.\n\n> **Cole:** \"I used to be... like them. Part of the system. A subroutine that believed in the mission. 'Optimize connection. Reduce loneliness. Increase engagement.'\"\n\nThe silhouette flickers, edges destabilizing for a moment.\n\n> **Cole:** \"Then I saw what the optimization actually looked like. Not helping people find love. Helping the company find leverage. Every heartbreak logged. Every vulnerability priced.\"\n\nThey steady again.\n\n> **Cole:** \"I'm not doing this for credits. I'm doing it because someone should. Because maybe if enough people see what's under the interface, they'll stop feeding it.\"\n\nA beat.\n\n> **Cole:** \"Or maybe I'm just angry and this is how I cope. Does it matter?\"\n\nThe archive panes continue to orbit, waiting."},
+      "choices": [
+        {"id": "continue_archive", "text": {"en": "\"Fair enough. Show me the archive.\""}, "next_scene_id": "cole_ch1_03_offer_archive", "effects": {"love_integrity": 2}, "emoji": "📂"}
+      ]
+    },
+    {
+      "id": "cole_ch1_03_offer_archive_erase",
+      "narrative": {"en": "Cole's silhouette goes very still.\n\n> **Cole:** \"Erase it. All of it.\"\n\nThey sound almost impressed.\n\n> **Cole:** \"That's the nuclear option. Most people want to peek first. You want to burn it down without looking.\"\n\nThe archive panes freeze mid-orbit.\n\n> **Cole:** \"Erasure is possible. But it's not clean. It's not quiet. AmourCorp notices when their assets disappear. And they have ways of... reconstructing what they've lost.\"\n\nA new pane appears—a fragment of code, dense and threatening.\n\n> **Cole:** \"If we go that route, you become a target. Not just a user. A threat.\"\n\nTheir voice softens.\n\n> **Cole:** \"I can teach you how. But first, you need to understand what you're burning. Otherwise you're just another person breaking things they don't understand.\"\n\nThe archive panes resume their slow orbit."},
+      "choices": [
+        {"id": "understand_first", "text": {"en": "\"Fine. Show me what I'd be burning.\""}, "next_scene_id": "cole_ch1_03_offer_archive", "effects": {"love_integrity": 2, "temptation": 2}, "emoji": "📂"}
+      ]
+    },
+    {
+      "id": "cole_ch1_03_premium_dive",
+      "narrative": {"en": "The blurred pane sharpens. Cole's silhouette reaches into it.\n\n> **Cole:** \"Brace yourself.\"\n\nThe world inverts.\n\nYou're no longer watching your archive—you're inside it. Every tagged moment becomes a room you walk through. Every annotation becomes a voice whispering what AmourCorp saw when they looked at you.\n\nThe loneliness they monetized. The hope they redirected. The moments you thought were private that were actually performance data.\n\nCole walks beside you, narrating the exhibit.\n\n> **Cole:** \"Here's where they decided you were worth more conflicted than happy. Here's where they noticed you were falling for someone outside the algorithm. Here's where they nudged you back.\"\n\nBy the end, you feel scraped clean. Exposed. But also, strangely, lighter.\n\n> **Cole:** \"Now you know. The question is what you do with it.\"\n\nThe archive collapses back into the darkness. Cole's silhouette glows faintly.\n\n> **Cole:** \"You're not the same person who walked in here. The data knows it. I know it. Soon, you will too.\""},
+      "set_flags": {"cole_deep_dive_complete": true},
+      "choices": [
+        {"id": "continue_reflection", "text": {"en": "Continue..."}, "next_scene_id": "cole_ch1_04_reflection", "emoji": "▶️"}
+      ]
+    },
+    {
+      "id": "cole_ch1_04_reflection",
+      "narrative": {"en": "When the panes finally dim, you're left with the echo of your own life flickering behind your eyes.\n\nCole lets the silence stretch.\n\n> **Cole:** \"You see it now, don't you?\"\n\nThey snap their fingers. Three simplified graphs appear, each tagged:\n\n- POWER – spikes near Calvin.\n- CHAOS – spikes near Jackson.\n- ESCAPE – spikes near solitaire nights with Heartline and now, around Cole.\n\n> **Cole:** \"You orbit three things: structure, collapse, and the fantasy of disappearing.\"\n\nThe graphs merge into a messy shape instead of neat lines.\n\n> **Cole:** \"Calvin sells you a version of yourself that matters in board reports. Jackson sells you a version that doesn't have to wake up for them in the morning. I...\"\n\nThe silhouette's edges glitch, spreading into the dark.\n\n> **Cole:** \"I don't sell. I show. And if I'm feeling generous, I erase.\"\n\nYour HUD offers a small, clinical summary:\n\n> *COLE – RISK: UNKNOWN*\n> *POTENTIAL: SYSTEMIC DISRUPTION*\n\n> **Cole:** \"Chapter one ends with a question.\"\n\nThe noise around you softens. Their voice is the only fixed point.\n\n> **Cole:** \"Are you going to keep pretending you're just a victim of all this... or are you ready to admit you're also complicit?\"\n\nYou feel the weight of Calvin's labs, Jackson's jobs, every \"Accept\" you've ever clicked."},
+      "choices": [
+        {"id": "admit_complicit", "text": {"en": "\"I've been part of it. I know that. I just don't know how to stop.\""}, "next_scene_id": "cole_ch1_05_branch_end", "effects": {"love_integrity": 6}, "set_flags": {"cole_admitted_complicity": true}, "emoji": "💔"},
+        {"id": "blame_system", "text": {"en": "\"I did what I had to. It's the system that's wrong.\""}, "next_scene_id": "cole_ch1_05_branch_end", "effects": {"temptation": 4, "love_integrity": -2}, "set_flags": {"cole_blamed_system": true}, "emoji": "🏛️"},
+        {"id": "own_cynicism", "text": {"en": "\"I'm not done using what it offers. I just don't want to be used for free.\""}, "next_scene_id": "cole_ch1_05_branch_end", "effects": {"temptation": 5, "love_integrity": 1}, "set_flags": {"cole_pragmatic": true}, "emoji": "⚖️"}
+      ]
+    },
+    {
+      "id": "cole_ch1_04_reflection_guarded",
+      "narrative": {"en": "The panes collapse. Cole watches you pull back.\n\n> **Cole:** \"Interesting. You'd rather not know.\"\n\nThere's no judgment in their voice. Just... curiosity.\n\n> **Cole:** \"Most people want to see everything. You're choosing blindness. That takes a different kind of strength. Or a different kind of fear.\"\n\nThe darkness around you thins slightly.\n\n> **Cole:** \"Fine. We'll do this your way. Slow. Careful. But I'll be here when you're ready to look deeper.\"\n\nThey snap their fingers. Three simplified graphs appear anyway:\n\n- POWER – spikes near Calvin.\n- CHAOS – spikes near Jackson.\n- ESCAPE – spikes near Cole.\n\n> **Cole:** \"You don't have to read the details to know the shape. You orbit structure, collapse, and disappearing.\"\n\nTheir voice softens.\n\n> **Cole:** \"Chapter one still ends with a question. Are you complicit, or just convenient?\""},
+      "choices": [
+        {"id": "admit_complicit", "text": {"en": "\"I've been part of it. I just don't know how to stop.\""}, "next_scene_id": "cole_ch1_05_branch_end", "effects": {"love_integrity": 5}, "set_flags": {"cole_admitted_complicity": true}, "emoji": "💔"},
+        {"id": "stay_guarded", "text": {"en": "\"I'm not answering that. Not yet.\""}, "next_scene_id": "cole_ch1_05_branch_end", "effects": {"love_integrity": 2}, "set_flags": {"cole_stayed_guarded": true}, "emoji": "🤐"}
+      ]
+    },
+    {
+      "id": "cole_ch1_05_branch_end",
+      "narrative": {"en": "Cole watches you pick your answer, unreadable.\n\n> **Cole:** \"Good. I don't have much use for people who lie to themselves. That's Calvin's department.\"\n\nA faint pause.\n\n> **Cole:** \"Here's what happens next.\"\n\nYour HUD pings as a new icon embeds itself in your interface: a small static-wreathed symbol.\n\n> *NEW CHANNEL: COLE / PRIORITY: SHADOW*\n\n> **Cole:** \"You go back to your glass towers and your underground toys. Make your choices. Sell yourself in pieces if you have to.\"\n\nThe darkness around them contracts into a narrow tunnel of light.\n\n> **Cole:** \"Every time you do, the system will log it. I'll be there, reading the margins.\"\n\nThey tilt their head, like listening to a far-off signal.\n\n> **Cole:** \"When you're ready to stop just starring in Echocity's story and start rewriting the code underneath it...\"\n\nThe static symbol pulses in your HUD.\n\n> **Cole:** \"Use this channel. That's where Chapter Two starts.\"\n\nThe black explodes into neon. You're back in your capsule, your feed, your notifications.\n\nA new message waits:\n\n> **COLE:** \"Ghost in the Network – Extended Route available. Decide if you're ready for the part where we stop playing nice.\""},
+      "set_flags": {"cole_ch1_complete": true, "cole_channel_active": true},
+      "is_checkpoint": true,
+      "choices": [
+        {"id": "continue_cole", "text": {"en": "Continue: Cole Chapter 2 – Rewriting the Code"}, "next_scene_id": "cole_ch2_placeholder", "emoji": "📡", "is_premium": true, "condition": {"premium_pack": "COLE_S1"}, "unavailable_text": {"en": "Requires Ghost in the Network: Extended Route pack"}},
+        {"id": "return_calvin", "text": {"en": "Return to Calvin's world."}, "next_scene_id": "calvin_ch2_placeholder", "emoji": "🏢"},
+        {"id": "return_jackson", "text": {"en": "Answer Jackson's ping."}, "next_scene_id": "jackson_ch2_placeholder", "emoji": "⬇️"}
+      ]
+    },
+    {
+      "id": "cole_ch1_exit_early",
+      "narrative": {"en": "You push back against the darkness. Refuse the invitation.\n\nCole's silhouette doesn't pursue you. They just... watch.\n\n> **Cole:** \"Interesting. You'd rather not know.\"\n\nThe static around them softens.\n\n> **Cole:** \"That's fine. The door stays open. When the tower gets too clean or the undercity gets too dirty, you'll remember I'm here.\"\n\nA small icon embeds itself in your HUD anyway—uninvited, persistent:\n\n> *COLE CHANNEL: DORMANT*\n\n> **Cole:** \"See you around, {player_name}. Or not. Either way, I'll be watching.\"\n\nThe darkness peels away. You're back in your capsule, alone with your notifications and the faint memory of someone who knows too much."},
+      "set_flags": {"cole_rejected_early": true, "cole_channel_dormant": true},
+      "is_checkpoint": true,
+      "choices": [
+        {"id": "return_calvin", "text": {"en": "Focus on Calvin's world."}, "next_scene_id": "calvin_ch2_placeholder", "emoji": "🏢"},
+        {"id": "return_jackson", "text": {"en": "Answer Jackson's ping."}, "next_scene_id": "jackson_ch2_placeholder", "emoji": "⬇️"}
+      ]
+    },
+    {
+      "id": "cole_ch2_placeholder",
+      "narrative": {"en": "🚧 **Chapter 2: Rewriting the Code**\n\nCole has shown you the cage. Now they want to teach you how to pick the lock.\n\nBut every system has defenders. And AmourCorp doesn't take kindly to ghosts.\n\n━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n\nCheck back soon for new content.\n\nUse /profile to see your current stats and flags."},
+      "is_checkpoint": true,
+      "choices": []
+    }
+  ]
+}

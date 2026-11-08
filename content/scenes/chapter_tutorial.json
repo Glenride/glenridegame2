@@ -1,0 +1,100 @@
+{
+  "chapter_id": "chapter_tutorial",
+  "title": {"en": "Welcome to Echocity"},
+  "scenes": [
+    {
+      "id": "chapter_tutorial_intro",
+      "narrative": {"en": "Rain slides down the glass walls of the transit pod as it descends into Echocity.\n\nBelow you: a maze of towers wrapped in holographic advertisements, pleasure districts pulsing with manufactured desire, corporate spires that scrape the perpetual clouds.\n\nYour neural implant hums to life. A familiar voice—your Heartline AI—purrs in your ear:\n\n> \"Welcome home, {player_name}. Your emotional profile is syncing. 14 potential matches within 500 meters. Shall I optimize your evening?\""},
+      "choices": [
+        {"id": "let_ai_optimize", "text": {"en": "\"Show me what you've got.\""}, "next_scene_id": "tutorial_heartline_intro", "effects": {"temptation": 5}, "emoji": "📱"},
+        {"id": "mute_ai", "text": {"en": "Mute the AI. You need to think."}, "next_scene_id": "tutorial_self_reflection", "effects": {"love_integrity": 5}, "emoji": "🔇"}
+      ]
+    },
+    {
+      "id": "tutorial_heartline_intro",
+      "narrative": {"en": "Heartline floods your vision with faces, bodies, compatibility scores.\n\n> \"Based on your biometrics, you respond strongly to: power dynamics, intellectual challenge, and—\" the AI pauses, almost coy—\"danger.\"\n\nThree profiles rise above the noise, flagged as \"Premium Matches\":\n\n💼 **Calvin Vance** – AmourCorp Executive. 94% compatibility. \"Owns the algorithm that owns your heart.\"\n\n🎸 **Jackson Cole** – Underground Artist. 87% compatibility. \"Burned his corporate chip out. Still burning.\"\n\n🔬 **Cole Reyes** – Research Lead. 91% compatibility. \"Knows what you want before you do.\""},
+      "set_flags": {"heartline_active": true},
+      "choices": [
+        {"id": "view_calvin", "text": {"en": "Tell me more about Calvin."}, "next_scene_id": "tutorial_calvin_preview", "emoji": "💼"},
+        {"id": "view_jackson", "text": {"en": "Jackson sounds interesting."}, "next_scene_id": "tutorial_jackson_preview", "emoji": "🎸"},
+        {"id": "view_cole", "text": {"en": "What does Cole research?"}, "next_scene_id": "tutorial_cole_preview", "emoji": "🔬"}
+      ]
+    },
+    {
+      "id": "tutorial_self_reflection",
+      "narrative": {"en": "The AI falls silent. Just you and the rain and the city sprawling beneath you.\n\nYou came to Echocity for a reason. Everyone does.\n\nSome come for the credits—corporations here pay triple for talent willing to blur ethical lines. Some come to disappear into pleasure loops and neural fantasies.\n\nYou came because the old world felt... hollow. Relationships curated by parents, careers chosen by committee. Here, at least the corruption is honest.\n\n> \"Muting complete,\" your AI whispers. \"But {player_name}—in this city, silence is expensive.\""},
+      "choices": [
+        {"id": "unmute", "text": {"en": "Fine. Show me the matches."}, "next_scene_id": "tutorial_heartline_intro", "effects": {"temptation": 3}, "emoji": "📱"},
+        {"id": "stay_quiet", "text": {"en": "Keep it muted. I'll find my own way."}, "next_scene_id": "tutorial_amourcorp_arrival", "effects": {"love_integrity": 5}, "emoji": "🚶"}
+      ]
+    },
+    {
+      "id": "tutorial_calvin_preview",
+      "narrative": {"en": "Calvin Vance's profile expands.\n\nAge 34. Chief Strategy Officer at AmourCorp—the company that built Heartline. The company that, in many ways, built modern Echocity.\n\nHis photo shows sharp features, silver-touched temples, eyes that look like they're calculating your value even through a screen.\n\n> **Heartline Analysis:** \"Calvin Vance responds to ambition, control, and those who can match his intensity. Warning: emotional unavailability index is HIGH. Attachment risk: SIGNIFICANT.\"\n\nA message notification pulses:\n\n> **Calvin:** \"I noticed you looking. AmourCorp is hosting a private gala tonight. Consider this your invitation.\""},
+      "set_flags": {"calvin_introduced": true},
+      "choices": [
+        {"id": "accept_calvin", "text": {"en": "Accept his invitation."}, "next_scene_id": "tutorial_stats_intro", "effects": {"temptation": 5, "career_status": 3}, "emoji": "✨"},
+        {"id": "browse_others", "text": {"en": "Keep browsing first."}, "next_scene_id": "tutorial_other_matches", "emoji": "👀"}
+      ]
+    },
+    {
+      "id": "tutorial_jackson_preview",
+      "narrative": {"en": "Jackson Cole's profile is sparse—half the fields are blank or corrupted.\n\nNo corporate affiliation. No verified income stream. His photo shows him mid-performance in some underground club, shirt open, eyes closed, fingers bleeding on guitar strings.\n\n> **Heartline Analysis:** \"Jackson Cole is flagged as NON-COMPLIANT. Limited data available. Emotional authenticity index: EXTREMELY HIGH. Corporate compatibility: NULL.\"\n\nA message appears—not through official channels. Somehow he's bypassed your filters:\n\n> **Jackson:** \"You're new. I can tell by how your implant pings. Meet me at the Rust District tonight. No algorithms. No scores. Just us.\""},
+      "set_flags": {"jackson_introduced": true},
+      "choices": [
+        {"id": "accept_jackson", "text": {"en": "Accept. Something real sounds good."}, "next_scene_id": "tutorial_stats_intro", "effects": {"love_integrity": 5}, "emoji": "🎸"},
+        {"id": "browse_others", "text": {"en": "Keep browsing first."}, "next_scene_id": "tutorial_other_matches", "emoji": "👀"}
+      ]
+    },
+    {
+      "id": "tutorial_cole_preview",
+      "narrative": {"en": "Cole Reyes's profile is clinical, almost sterile.\n\nResearch Lead at AmourCorp's Behavioral Design division. They study how people fall in love—and how to make them fall faster, harder, with better retention metrics.\n\nTheir photo shows someone androgynously beautiful, dark eyes that seem to look through you rather than at you.\n\n> **Heartline Analysis:** \"Cole Reyes has unprecedented access to your emotional data. Compatibility is calculated at 91%—but this figure may be artificially influenced. Proceed with informed consent.\"\n\nA notification—formal, precise:\n\n> **Cole:** \"I've been watching your intake metrics. You're different. I'd like to study you closer. Lab 7, tonight. Optional.\""},
+      "set_flags": {"cole_introduced": true},
+      "choices": [
+        {"id": "accept_cole", "text": {"en": "Accept. Being studied sounds... intriguing."}, "next_scene_id": "tutorial_stats_intro", "effects": {"temptation": 5}, "emoji": "🔬"},
+        {"id": "browse_others", "text": {"en": "Keep browsing first."}, "next_scene_id": "tutorial_other_matches", "emoji": "👀"}
+      ]
+    },
+    {
+      "id": "tutorial_other_matches",
+      "narrative": {"en": "You scroll through the other profiles. Dozens of faces, each tagged with compatibility scores, income brackets, kink indices.\n\nSome are clearly artificial—synthetic companions licensed by AmourCorp. Others are real, but their profiles are so curated they might as well be products.\n\nThe three Premium Matches keep floating back to the top. The algorithm knows what it's doing.\n\n> **Heartline:** \"Indecision detected. Shall I narrow your options based on your arousal response during preview?\""},
+      "choices": [
+        {"id": "calvin_route", "text": {"en": "Fine. Tell me more about Calvin."}, "next_scene_id": "tutorial_calvin_preview", "emoji": "💼"},
+        {"id": "jackson_route", "text": {"en": "I want to know about Jackson."}, "next_scene_id": "tutorial_jackson_preview", "emoji": "🎸"},
+        {"id": "cole_route", "text": {"en": "Cole. The researcher."}, "next_scene_id": "tutorial_cole_preview", "emoji": "🔬"}
+      ]
+    },
+    {
+      "id": "tutorial_amourcorp_arrival",
+      "narrative": {"en": "Your pod docks at the AmourCorp residential tower. Your new home—a capsule apartment with smart glass walls showing whatever view you can afford to rent.\n\nCurrently: a simulation of an ocean sunset. Somewhere in the building, your real neighbors are probably watching the same fake view.\n\nYour work terminal blinks with new employee orientation materials:\n\n> \"Welcome to AmourCorp, {player_name}. Tomorrow you begin in the Engagement Analytics division. Tonight: rest. Or don't. Echocity never judges.\""},
+      "choices": [
+        {"id": "check_heartline", "text": {"en": "Check Heartline anyway."}, "next_scene_id": "tutorial_heartline_intro", "emoji": "📱"},
+        {"id": "sleep", "text": {"en": "Rest. Tomorrow is a new start."}, "next_scene_id": "tutorial_stats_intro", "effects": {"love_integrity": 3}, "emoji": "😴"}
+      ]
+    },
+    {
+      "id": "tutorial_stats_intro",
+      "narrative": {"en": "Before you step into whatever tonight holds, your implant runs a baseline sync.\n\n💡 **YOUR METRICS:**\n\n❤️ **Love Integrity** — How true you stay to genuine connection. High integrity unlocks deeper bonds. Low integrity... opens other doors.\n\n🔥 **Temptation** — How much you've given in to Echocity's shortcuts. The city rewards this. Your soul may not.\n\n💼 **Career Status** — Your standing in the corporate hierarchy. Power is its own seduction.\n\n⚡ **Energy** — Everything costs something. Manage yourself, or the city will manage you.\n\nThese metrics will shift with every choice. In Echocity, there are no neutral actions."},
+      "choices": [
+        {"id": "continue", "text": {"en": "I understand. Let's begin."}, "next_scene_id": "tutorial_first_night", "emoji": "▶️"}
+      ]
+    },
+    {
+      "id": "tutorial_first_night",
+      "narrative": {"en": "Night falls on Echocity—not that you can tell through the perpetual haze. The towers glow brighter. The pleasure districts pulse.\n\nYour implant buzzes with the invitation you accepted earlier. Somewhere in this city, someone is waiting to see what you're made of.\n\n> **Heartline:** \"Your match is expecting you. Remember: first impressions in Echocity aren't about who you are. They're about who you're willing to become.\"\n\nThe city holds its breath. So do you."},
+      "is_checkpoint": true,
+      "choices": [
+        {"id": "go_calvin", "text": {"en": "Head to the AmourCorp Gala"}, "next_scene_id": "intro_01_calvin", "effects": {"career_status": 3}, "emoji": "🏛️", "condition": {"flag": "calvin_introduced"}},
+        {"id": "go_jackson", "text": {"en": "Find Jackson in the Rust District"}, "next_scene_id": "intro_01_jackson", "effects": {"love_integrity": 3}, "emoji": "🌃", "condition": {"flag": "jackson_introduced"}},
+        {"id": "go_cole", "text": {"en": "Visit Cole in Lab 7"}, "next_scene_id": "intro_01_cole", "effects": {"temptation": 3}, "emoji": "🔬", "condition": {"flag": "cole_introduced"}}
+      ]
+    },
+    {
+      "id": "intro_01_calvin",
+      "narrative": {"en": "The AmourCorp tower looms—a needle of black glass and chrome, its upper floors lost in clouds.\n\nAt the entrance, a security drone scans your implant. Your profile flashes: **Guest of Calvin Vance. Clearance: Executive Hospitality.**\n\nThe lobby is a cathedral of curved screens showing Heartline success stories: couples embracing, weddings, births—all tagged with engagement metrics and subscription tiers.\n\n> \"Calvin Vance is expecting you in the Apex Lounge, Floor 99. Have a productive evening.\"\n\nThe elevator door whispers open. Above you: power, wealth, and something darker waiting to see what you'll do for it."},
+      "choices": [
+        {"id": "ascend", "text": {"en": "Step into the elevator."}, "next_scene_id": "calvin_gala", "emoji": "⬆️"}
+      ]
+    }
+  ]
+}

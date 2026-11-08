@@ -1,0 +1,418 @@
+{
+  "chapter_id": "jackson",
+  "title": {"en": "Low Level, High Voltage"},
+  "scenes": [
+    {
+      "id": "jackson_ch1_intro_from_calvin",
+      "narrative": {"en": "The priority channel from Calvin still pulses in the corner of your vision. You dismiss it.\n\nInstead, you open the other ping—the one that's been sitting there for hours, patient and irreverent:\n\n> **Jackson:** \"Tower air making you dizzy yet? Come breathe something real. Level -22. You know the lift.\"\n\nNo pressure. No metrics. Just an invitation to somewhere Calvin's sensors don't reach.\n\nYou tell yourself you're just curious. Just need to clear your head. Just want one night where no one's reading your emotional telemetry.\n\nThe freight lift rattles as it descends, each floor a layer peeled away from AmourCorp's pristine world. By Level -10, the lights flicker. By -15, the air tastes different—recycled, industrial, alive.\n\nBy -22, you're somewhere Calvin would never follow.\n\nAnd that's exactly the point."},
+      "set_flags": {"jackson_route_started": true, "came_from_calvin": true},
+      "choices": [
+        {"id": "continue", "text": {"en": "Step into the Verge."}, "next_scene_id": "jackson_01_club_arrival", "emoji": "⬇️"}
+      ]
+    },
+    {
+      "id": "jackson_01_club_arrival",
+      "narrative": {"en": "**Level -22, District Verge.**\n\nThe freight lift groans to a stop and spits you out into a corridor of leaking pipes and flickering neon. Bootleg Heartline terminals line the walls, their screens cracked and cycling through corrupted match profiles. The air smells like synth-alcohol, ozone, and bad decisions.\n\nA figure detaches from the shadows near a rusted service door.\n\nJackson.\n\nHood up, tattooed knuckles wrapped around a vape pen that pulses with something definitely not legal topside. His smile is crooked, sharp—like he's getting away with something right now and inviting you to join.\n\n> **Jackson:** \"Look who finally remembers how to breathe.\"\n\nHe pushes off the wall, circling you with an appraising look. His eyes catch the dim light, cataloging every tension in your shoulders, every trace of wherever you've been.\n\n> **Jackson:** \"You smell like tower oxygen. Filtered. Controlled.\"\n\nHe steps closer, voice dropping.\n\n> **Jackson:** \"Down here, we like our air dirty. Our drinks dirtier. And our company…\"\n\nHe grins.\n\n> **Jackson:** \"Well. That depends on what you came looking for.\""},
+      "set_flags": {"jackson_route_started": true},
+      "choices": [
+        {"id": "came_for_rush", "text": {"en": "\"I needed something real. Or at least loud.\""}, "next_scene_id": "jackson_02_inside_club", "effects": {"temptation": 5}, "emoji": "🔊"},
+        {"id": "came_to_forget", "text": {"en": "\"I needed to stop thinking about glass floors.\""}, "next_scene_id": "jackson_02_inside_club", "effects": {"love_integrity": 3, "temptation": 3}, "set_flags": {"calvin_rebound_with_jackson": true}, "emoji": "🏃"},
+        {"id": "came_for_business", "text": {"en": "\"You said there was a job. Let's talk credits.\""}, "next_scene_id": "jackson_02_inside_club", "effects": {"career_status": 2, "love_integrity": -2}, "emoji": "💳"}
+      ]
+    },
+    {
+      "id": "jackson_02_inside_club",
+      "narrative": {"en": "The club hits you like a wall of sound and heat.\n\nLow ceiling. Strobe glitches painting bodies in freeze-frame motion. The bass throbs through your chest like a second heartbeat. Illegal AR filters overlay everyone with shifting avatars—faces that flicker between human and something else, identities sliding like wet paint.\n\nOn cracked screens above the bar: pirated feeds, corrupted AmourCorp ads with glitched slogans, Heartline compatibility loops playing on endless repeat for an audience that stopped believing in them years ago.\n\nJackson slides onto a stool and orders drinks on someone else's tab. Probably.\n\n> **Jackson:** \"Relax. You look like you're still waiting for someone to grade your posture.\"\n\nHe slides a glass toward you—something that glows faintly purple and smells like synthetic fruit and regret.\n\n> **Jackson:** \"Got something for you. Optional upgrade.\"\n\nHe pulls out a slim device, no bigger than a thumbnail.\n\n> **Jackson:** \"Hacked overlay. Wears like a second skin over your ID. Heartline can't read you. AmourCorp can't track you. You become… nobody. Just for tonight.\"\n\nHis eyes glitter.\n\n> **Jackson:** \"Or there's this.\"\n\nHe taps the glass.\n\n> **Jackson:** \"Dampens emotional telemetry for a few hours. Your feelings stay yours. No graphs. No streams. Just… you, in the dark.\"\n\nAround you, patrons watch Jackson with a mix of wariness and need. Everyone here owes someone something."},
+      "choices": [
+        {"id": "accept_cloak", "text": {"en": "Let him cloak your ID. Become nobody."}, "next_scene_id": "jackson_03_smuggling_offer", "effects": {"temptation": 6, "career_status": -2}, "set_flags": {"jackson_shadow_mode": true}, "emoji": "👤"},
+        {"id": "refuse_cloak", "text": {"en": "Refuse the cloak. Stay yourself, even here."}, "next_scene_id": "jackson_03_smuggling_offer", "effects": {"love_integrity": 5}, "emoji": "🛡️"},
+        {"id": "take_drink", "text": {"en": "Take the drink. Let your metrics go fuzzy."}, "next_scene_id": "jackson_03_smuggling_offer", "effects": {"temptation": 8, "love_integrity": -3}, "set_flags": {"jackson_metrics_dampened": true}, "emoji": "🍸"}
+      ]
+    },
+    {
+      "id": "jackson_03_smuggling_offer",
+      "narrative": {"en": "Later—maybe an hour, maybe three; time moves differently down here—Jackson leads you to a back room behind the club.\n\nCrates stacked against sweating walls. Flickering screens showing shipping manifests in languages you don't recognize. And on a table: illegal Heartline chips, still warm from whatever printer made them.\n\n> **Jackson:** \"Okay. Cards on the table.\"\n\nHe leans against a crate, arms crossed, the playfulness dimmed to something more serious.\n\n> **Jackson:** \"I've got a shipment that needs to move. Problem is, everyone down here looks like they belong down here. Scanners flag us before we're through the door.\"\n\nHis eyes find yours.\n\n> **Jackson:** \"You, though. You're clean. Got that 'I pay my taxes and believe in the system' face. Maybe even some mid-tier corporate clearance if you've been climbing like I think.\"\n\nHe pushes off the crate, stepping closer.\n\n> **Jackson:** \"I need you to pose as a courier. Walk something past a checkpoint. Hand it off on the other side. Simple. Boring. Pays well.\"\n\nHe's not telling you everything. You can feel it in the spaces between his words.\n\n> **Jackson:** \"So. You in?\""},
+      "choices": [
+        {"id": "agree_no_questions", "text": {"en": "\"I'm in. No questions.\""}, "next_scene_id": "jackson_04_scanner_scene", "effects": {"temptation": 7, "love_integrity": -2}, "set_flags": {"jackson_job_committed": true, "jackson_job_blind": true}, "emoji": "✅"},
+        {"id": "demand_details", "text": {"en": "\"What exactly am I carrying?\""}, "next_scene_id": "jackson_03_reveal", "effects": {"love_integrity": 4}, "emoji": "🔍"},
+        {"id": "refuse_job", "text": {"en": "\"I'm not getting involved in anything that messy.\""}, "next_scene_id": "jackson_03_refused", "effects": {"love_integrity": 6, "temptation": -4}, "set_flags": {"jackson_trust_down": true}, "emoji": "🚫"}
+      ]
+    },
+    {
+      "id": "jackson_03_reveal",
+      "narrative": {"en": "Jackson's smile flickers, then steadies.\n\n> **Jackson:** \"Careful. Curiosity's expensive down here.\"\n\nBut he respects the question. You can see it in the way his shoulders drop slightly.\n\n> **Jackson:** \"Fine. You want the ugly version?\"\n\nHe picks up one of the chips from the table, turning it in his fingers.\n\n> **Jackson:** \"Stolen emotional data. Raw recordings. People's grief, desire, fear—ripped straight from their implants and packaged for resale.\"\n\nHe sets the chip down.\n\n> **Jackson:** \"There's a market for feeling things you never felt. Empathy tourism for the numb. Blackmail material for the clever. Entertainment for the sick.\"\n\nHis eyes meet yours, steady.\n\n> **Jackson:** \"The corps do the same thing, just with better lawyers. AmourCorp probably has terabytes of this from their 'consenting' users. Difference is, we're honest about being criminals.\"\n\nHe steps closer.\n\n> **Jackson:** \"Still want in? Or does knowing make it worse?\""},
+      "set_flags": {"jackson_knows_cargo": true},
+      "choices": [
+        {"id": "still_in", "text": {"en": "\"I'm still in. At least you're honest.\""}, "next_scene_id": "jackson_04_scanner_scene", "effects": {"temptation": 5, "love_integrity": -1}, "set_flags": {"jackson_job_committed": true}, "emoji": "🤝"},
+        {"id": "refuse_now", "text": {"en": "\"That's too far. I can't be part of this.\""}, "next_scene_id": "jackson_03_refused", "effects": {"love_integrity": 7, "temptation": -3}, "set_flags": {"jackson_trust_down": true}, "emoji": "🚫"}
+      ]
+    },
+    {
+      "id": "jackson_03_refused",
+      "narrative": {"en": "The word lands between you like a wall.\n\nJackson's expression doesn't crack—he's too practiced for that. But something shifts behind his eyes. Hurt, maybe. Or just recalculation.\n\n> **Jackson:** \"Huh.\"\n\nHe laughs, but it's hollow.\n\n> **Jackson:** \"Okay. Sure. You're too good for the dirty work. I get it. Happens.\"\n\nHe turns away, starts tidying the chips on the table like you're already gone.\n\n> **Jackson:** \"Plenty of other faces down here. Someone'll step up.\"\n\nBut his voice has an edge now. You've seen a side of him you weren't supposed to, and walked away.\n\nThe club noise filters back in as you stand there, uncertain whether to leave or stay.\n\n> **Jackson:** \"You can still drink. Still dance. I'm not kicking you out.\"\n\nA pause.\n\n> **Jackson:** \"Just don't expect me to trust you with anything that matters. Not yet.\""},
+      "choices": [
+        {"id": "stay_anyway", "text": {"en": "Stay. Try to rebuild what you just dented."}, "next_scene_id": "jackson_06_back_at_club_refused", "effects": {"love_integrity": 3}, "emoji": "🍸"},
+        {"id": "leave", "text": {"en": "Leave. This isn't your world."}, "next_scene_id": "jackson_10_ch1_outcome_early", "effects": {"love_integrity": 5, "temptation": -5}, "set_flags": {"jackson_route_weakened": true}, "emoji": "🚶"}
+      ]
+    },
+    {
+      "id": "jackson_04_scanner_scene",
+      "narrative": {"en": "The transition corridor feels like crossing into enemy territory.\n\nJackson walks you partway—through service tunnels, past sleeping vagrants and humming power conduits—then stops at the edge of a surveillance zone. Beyond: a corporate checkpoint, mid-tier facility, clean lights cutting through the undercity grime.\n\nHe presses a data chip into your palm. It's warm.\n\n> **Jackson:** \"Slip through. Hand it off on the other side. Contact's waiting—you'll know them by the blue optical implant.\"\n\nHis fingers linger on yours a moment longer than necessary.\n\n> **Jackson:** \"Don't look at what's inside. Don't think about what's inside. Just walk like you belong.\"\n\nThe checkpoint scanner glows ahead: a vertical band of light that reads employment affiliation, basic metrics, recent emotional anomalies.\n\nIf you've touched Calvin's world, the system might flag you as high-interest personnel. Extra scrutiny. Extra risk.\n\nJackson fades back into the shadows.\n\n> **Jackson:** \"See you on the other side. Or not. Either way—thanks for being interesting.\""},
+      "choices": [
+        {"id": "use_calvin_status", "text": {"en": "Use your AmourCorp clearance to bluff through."}, "next_scene_id": "jackson_05_hand_off", "effects": {"career_status": 4, "temptation": 3}, "set_flags": {"calvin_assets_used_for_crime": true}, "emoji": "🏢"},
+        {"id": "hide_status", "text": {"en": "Hide your clearance. Act like a nobody."}, "next_scene_id": "jackson_05_hand_off", "effects": {"love_integrity": 3, "career_status": -1}, "emoji": "👤"},
+        {"id": "ditch_cargo", "text": {"en": "At the last second, ditch the cargo."}, "next_scene_id": "jackson_05_ditched", "effects": {"love_integrity": 5}, "set_flags": {"jackson_trust_down": true, "jackson_cargo_ditched": true}, "emoji": "🗑️"}
+      ]
+    },
+    {
+      "id": "jackson_05_hand_off",
+      "narrative": {"en": "The scanner washes over you—a cold tingle across your skin, your implants, your secrets.\n\nGreen light. You're through.\n\nOn the other side: a figure in a maintenance uniform, blue optical implant glinting like a misplaced star. They step close—too close—checking your ID with a fingertip pressed to the interface at your wrist.\n\n> **Contact:** \"Clean delivery. Impressive.\"\n\nThe chip passes between you, invisible to cameras, hidden in a handshake that feels more like a caress.\n\nAs the data transfers, you catch a glimpse of what's moving through their display: waveforms of emotion, peaks and valleys of someone's raw experience. Grief. Desire. Fear. All packaged and priced.\n\nThe contact smiles—cold, professional.\n\n> **Contact:** \"You top-floor types pretend you don't know this is what you sell. At least we're honest about being vampires.\"\n\nIf Calvin's mark is on you, they add:\n\n> **Contact:** \"Your boss would pay triple for this in a cleaner wrapper. Tell him we said hello.\"\n\nThe transfer completes. The contact melts back into the crowd. And you're left holding nothing but the weight of what you just moved."},
+      "set_flags": {"jackson_debt_paid": true},
+      "choices": [
+        {"id": "no_hesitation", "text": {"en": "Walk away. Don't look back."}, "next_scene_id": "jackson_06_back_at_club", "effects": {"temptation": 6, "career_status": 2}, "emoji": "🚶"},
+        {"id": "ask_purpose", "text": {"en": "\"What are you going to do with it?\""}, "next_scene_id": "jackson_05_what_happens", "effects": {"love_integrity": 4}, "emoji": "❓"},
+        {"id": "sabotage_subtle", "text": {"en": "Slip them corrupted data instead."}, "next_scene_id": "jackson_05_sabotaged", "effects": {"love_integrity": 5, "temptation": -2}, "set_flags": {"jackson_cargo_sabotaged": true}, "emoji": "💔"}
+      ]
+    },
+    {
+      "id": "jackson_05_what_happens",
+      "narrative": {"en": "The contact pauses, blue eye flickering as they process your question.\n\n> **Contact:** \"Curious one. Fine.\"\n\nThey gesture vaguely at the city above.\n\n> **Contact:** \"There are clubs—exclusive ones—where you can pay to feel what someone else felt. First kiss. Last breath. The moment they realized they were being cheated on. All authentic. All stolen.\"\n\nThey lean closer.\n\n> **Contact:** \"Or it goes to leverage. Imagine having the emotional recording of a CEO's breakdown. A politician's secret grief. A cop's moment of doubt.\"\n\nThey smile, and it doesn't reach either eye.\n\n> **Contact:** \"Feelings are currency down here. Everyone's selling. Most just don't know it yet.\"\n\nThe transfer is already complete. Knowing changes nothing—except how you feel about yourself."},
+      "choices": [
+        {"id": "accept_reality", "text": {"en": "Accept it. This is the world."}, "next_scene_id": "jackson_06_back_at_club", "effects": {"temptation": 4}, "emoji": "😐"},
+        {"id": "feel_sick", "text": {"en": "Feel sick. But keep walking."}, "next_scene_id": "jackson_06_back_at_club", "effects": {"love_integrity": 3, "temptation": 2}, "set_flags": {"jackson_job_regret": true}, "emoji": "🤢"}
+      ]
+    },
+    {
+      "id": "jackson_05_ditched",
+      "narrative": {"en": "At the last moment, your fingers find the chip in your pocket—and let it drop.\n\nIt clatters into a storm drain, lost in the dark water below. Gone.\n\nThe scanner washes over you. Green light. Clean.\n\nBut when you reach the other side, the contact with the blue eye is waiting—and they know something's wrong. Their expression shifts from expectation to cold calculation.\n\n> **Contact:** \"Empty hands. Interesting choice.\"\n\nThey don't threaten. They don't need to. They just look at you like you've become a problem someone will have to solve later.\n\n> **Contact:** \"Tell Jackson he owes us now. And so do you.\"\n\nThey're gone before you can respond, leaving you standing in the harsh corridor light, lighter by one chip and heavier by one enemy."},
+      "set_flags": {"jackson_job_failed": true, "jackson_enemy_made": true},
+      "choices": [
+        {"id": "go_back", "text": {"en": "Go back to Jackson. Face the fallout."}, "next_scene_id": "jackson_06_back_at_club_failed", "effects": {"love_integrity": 4}, "emoji": "😬"}
+      ]
+    },
+    {
+      "id": "jackson_05_sabotaged",
+      "narrative": {"en": "Your fingers move before your conscience can catch up.\n\nThe chip you hand over isn't the one Jackson gave you—it's the corrupted backup from your own implant. Junk data dressed in the right wrapper.\n\nThe contact doesn't notice. The transfer completes. They nod, satisfied, and melt into the crowd.\n\nYou've just made Jackson an enemy he doesn't know about yet. And you've kept something ugly from reaching its destination.\n\nWhether that makes you a hero or just a different kind of criminal—you're not sure anymore.\n\nThe real chip sits heavy in your pocket as you walk back toward the Verge, carrying a secret that could destroy whatever fragile thing is building between you and Jackson."},
+      "set_flags": {"jackson_sabotage_secret": true},
+      "choices": [
+        {"id": "hide_it", "text": {"en": "Keep the secret. Let Jackson think you delivered."}, "next_scene_id": "jackson_06_back_at_club", "effects": {"love_integrity": 2, "temptation": 3}, "set_flags": {"jackson_secret_kept": true}, "emoji": "🤫"},
+        {"id": "confess", "text": {"en": "Tell Jackson what you did."}, "next_scene_id": "jackson_06_confession", "effects": {"love_integrity": 6}, "emoji": "💬"}
+      ]
+    },
+    {
+      "id": "jackson_06_back_at_club",
+      "narrative": {"en": "The club swallows you back into its noise and heat.\n\nJackson is waiting in a back booth, one arm draped along the seat, watching the crowd like a king surveying subjects who don't know they're owned.\n\nWhen he sees you, his face lights up—genuine, unguarded, gone before you can fully register it.\n\n> **Jackson:** \"Look who made it back in one piece.\"\n\nHe slides a drink toward you. Something expensive. Probably stolen.\n\n> **Jackson:** \"Credits are already moving. Our friend got what they needed. And you...\"\n\nHe leans forward, eyes catching the strobe light.\n\n> **Jackson:** \"You just proved you can walk in both worlds. That's rare. That's valuable. That's...\"\n\nHe grins.\n\n> **Jackson:** \"...kind of hot, actually.\"\n\nThe bass throbs. Bodies move around you in slow, hungry patterns. Jackson's knee presses against yours under the table—casual enough to deny, deliberate enough to feel.\n\nHe leans close to say something and his breath is warm against your ear, but the words get drowned out by the drop. Then he jerks his chin toward a door half-hidden behind a broken holo-sign."},
+      "choices": [
+        {"id": "celebrate", "text": {"en": "\"We made it. That felt... good.\""}, "next_scene_id": "jackson_07_rail_edge", "effects": {"temptation": 7}, "set_flags": {"jackson_celebrated": true}, "emoji": "🎉"},
+        {"id": "confess_guilt", "text": {"en": "\"I feel sick about what I just moved.\""}, "next_scene_id": "jackson_06_guilt_response", "effects": {"love_integrity": 6}, "emoji": "😰"},
+        {"id": "just_business", "text": {"en": "\"I'm only interested in the money. Not you.\""}, "next_scene_id": "jackson_07_rail_edge", "effects": {"career_status": 2, "love_integrity": -4}, "set_flags": {"jackson_cold_shoulder": true}, "emoji": "💰"},
+        {"id": "back_room", "text": {"en": "Follow Jackson into the back room."}, "next_scene_id": "jackson_premium_01_back_room_confession", "effects": {"temptation": 5}, "emoji": "🚪", "is_premium": true, "condition": {"premium_item": "JACKSON_SCENE1"}, "unavailable_text": {"en": "Unlock 'Back-Room Confession' to follow Jackson somewhere private."}}
+      ]
+    },
+    {
+      "id": "jackson_06_guilt_response",
+      "narrative": {"en": "The grin fades. Something real surfaces in Jackson's eyes.\n\n> **Jackson:** \"Yeah. I know.\"\n\nHe doesn't mock you. Doesn't deflect. Just looks at his drink for a long moment.\n\n> **Jackson:** \"First time I moved something like that, I threw up in an alley for an hour. Couldn't look at my own reflection for a week.\"\n\nHe takes a slow sip.\n\n> **Jackson:** \"Then I got used to it. That's the part that should scare you. Not the cargo—the way you stop caring.\"\n\nHis eyes meet yours.\n\n> **Jackson:** \"You still care. That's rare down here. Most of us burned that out years ago.\"\n\nA pause. Something softens in his posture.\n\n> **Jackson:** \"Welcome to reality, I guess. It doesn't get cleaner. But if you're lucky, you find people worth getting dirty for.\""},
+      "choices": [
+        {"id": "is_he_worth_it", "text": {"en": "\"Are you worth it?\""}, "next_scene_id": "jackson_07_rail_edge", "effects": {"temptation": 4, "love_integrity": 3}, "emoji": "❤️"},
+        {"id": "leave_guilt", "text": {"en": "\"I need air. I need to think.\""}, "next_scene_id": "jackson_07_rail_edge", "effects": {"love_integrity": 4}, "emoji": "🌬️"}
+      ]
+    },
+    {
+      "id": "jackson_06_back_at_club_refused",
+      "narrative": {"en": "The club feels different now. Louder. More hollow.\n\nJackson is at the bar, back to you, tension visible in his shoulders. Someone else took the job—you can see them in the crowd, a nervous kid with too-bright eyes, disappearing toward the back rooms.\n\nWhen Jackson notices you haven't left, something complicated crosses his face.\n\n> **Jackson:** \"Still here? Thought you'd be halfway back to your clean little life by now.\"\n\nBut he doesn't tell you to go. He slides a drink toward you—cheaper than what he'd have poured an hour ago, but still an offering.\n\n> **Jackson:** \"You want the rush without the dirt. I get it. Most people do.\"\n\nHe finally turns to face you.\n\n> **Jackson:** \"Problem is, down here, they come packaged together. Can't have the high without the fall.\""},
+      "choices": [
+        {"id": "prove_worth", "text": {"en": "\"Maybe I just need a different kind of risk.\""}, "next_scene_id": "jackson_07_rail_edge", "effects": {"temptation": 5}, "emoji": "🎲"},
+        {"id": "accept_limits", "text": {"en": "\"I have my limits. That doesn't make me useless.\""}, "next_scene_id": "jackson_07_rail_edge", "effects": {"love_integrity": 5}, "emoji": "🛡️"}
+      ]
+    },
+    {
+      "id": "jackson_06_back_at_club_failed",
+      "narrative": {"en": "Jackson's waiting in the back booth. But when he sees your face—your empty hands—his expression goes flat.\n\n> **Jackson:** \"You didn't.\"\n\nYou tell him. The chip. The drain. The contact's cold promise.\n\nFor a long moment, he just stares at you. The club noise fills the silence like static.\n\n> **Jackson:** \"Do you have any idea what you just cost me?\"\n\nHis voice is quiet. That's worse than shouting.\n\n> **Jackson:** \"Credits. Reputation. Probably a few months of life expectancy, depending on how patient they're feeling.\"\n\nHe laughs, but there's no humor in it.\n\n> **Jackson:** \"And you did it because... what? You got scared? You grew a conscience in the middle of a heist?\"\n\nHe stands, movements tight with controlled fury.\n\n> **Jackson:** \"You're either the dumbest person I've met this year, or the most honest. Haven't decided which is worse.\""},
+      "choices": [
+        {"id": "stand_ground", "text": {"en": "\"I couldn't do it. I won't apologize for that.\""}, "next_scene_id": "jackson_07_rail_edge_tense", "effects": {"love_integrity": 7}, "emoji": "🛑"},
+        {"id": "offer_fix", "text": {"en": "\"Tell me how to fix this. I'll make it right.\""}, "next_scene_id": "jackson_07_rail_edge", "effects": {"temptation": 4, "love_integrity": 2}, "set_flags": {"jackson_owes_favor": true}, "emoji": "🔧"}
+      ]
+    },
+    {
+      "id": "jackson_06_confession",
+      "narrative": {"en": "You find Jackson in the back booth, already celebrating a job well done.\n\nThe words come out before you can stop them. The sabotage. The corrupted data. The real chip still in your pocket.\n\nJackson's expression freezes. Then slowly, carefully, he sets down his drink.\n\n> **Jackson:** \"Say that again.\"\n\nYou do. And this time you watch something complicated move through his eyes—anger, yes, but also something that might be respect. Or disbelief.\n\n> **Jackson:** \"You sabotaged my deal... to what? Save some strangers' feelings from being sold?\"\n\nHe laughs. It sounds almost wounded.\n\n> **Jackson:** \"That's either the most principled thing anyone's done for me, or the stupidest. Either way, I've got enemies I didn't have an hour ago.\"\n\nHe stands, too close, voice dropping.\n\n> **Jackson:** \"And you told me. Instead of running. Instead of keeping it a secret.\"\n\nHe studies your face like he's seeing you for the first time.\n\n> **Jackson:** \"Who the hell are you?\""},
+      "set_flags": {"jackson_confession_made": true},
+      "choices": [
+        {"id": "someone_different", "text": {"en": "\"Someone who doesn't want to lie to you.\""}, "next_scene_id": "jackson_07_rail_edge", "effects": {"love_integrity": 8, "temptation": 3}, "emoji": "💯"},
+        {"id": "dont_know", "text": {"en": "\"I don't know anymore.\""}, "next_scene_id": "jackson_07_rail_edge", "effects": {"love_integrity": 5}, "emoji": "😔"}
+      ]
+    },
+    {
+      "id": "jackson_07_rail_edge",
+      "narrative": {"en": "Jackson leads you out of the club through corridors that get grimier with each turn. Past sleeping vagrants and humming power conduits, through a rusted access hatch, onto—\n\nOpen air. Or what passes for it down here.\n\nAn abandoned mag-rail line stretches into the dark, suspended over an industrial chasm. Far below, machinery grinds and glows. The city's guts, laid bare.\n\nThis is Jackson's rooftop. His edge.\n\nHe walks along the rail itself, arms out, daring gravity. The metal groans under his boots.\n\n> **Jackson:** \"Up there, they own hearts on paper. Down here, we at least know we're owned.\"\n\nHe turns, backlit by distant sparks, and looks at you.\n\n> **Jackson:** \"So why'd you come? Really.\"\n\nThe question hangs in the industrial haze.\n\n> **Jackson:** \"Was it the thrill? Me? Or are you just running from someone else?\"\n\nIf you carry Calvin's marks, he adds with a knowing edge:\n\n> **Jackson:** \"That tower boy got into your head, didn't he? And you came down here to shake him loose.\""},
+      "choices": [
+        {"id": "came_for_him", "text": {"en": "\"I came for you. Your chaos. Your heat.\""}, "next_scene_id": "jackson_08_moment", "effects": {"temptation": 8, "love_integrity": -2}, "set_flags": {"jackson_admitted_desire": true}, "emoji": "🔥"},
+        {"id": "escape_calvin", "text": {"en": "\"I came to escape the tower. To feel something real.\""}, "next_scene_id": "jackson_08_moment", "effects": {"love_integrity": 5, "temptation": 3}, "set_flags": {"jackson_refuge_from_calvin": true}, "emoji": "🏃"},
+        {"id": "just_distraction", "text": {"en": "\"Just a distraction. Nothing personal.\""}, "next_scene_id": "jackson_08_moment_cold", "effects": {"career_status": 1, "love_integrity": -3}, "set_flags": {"jackson_trust_damaged": true}, "emoji": "😐"}
+      ]
+    },
+    {
+      "id": "jackson_07_rail_edge_tense",
+      "narrative": {"en": "Jackson doesn't lead you anywhere. He just walks.\n\nYou follow, through corridors that twist deeper into the Verge's skeleton. Neither of you speak. The air gets colder, damper, heavier with unspoken tension.\n\nFinally, he stops at an abandoned mag-rail platform. The tracks stretch into darkness over a chasm of grinding machinery.\n\nHe sits on the edge, legs dangling over nothing.\n\n> **Jackson:** \"You cost me tonight. Maybe more than tonight.\"\n\nHis voice is flat. Tired.\n\n> **Jackson:** \"But you told me the truth. That's... rare. Stupid, but rare.\"\n\nHe doesn't look at you.\n\n> **Jackson:** \"Sit or don't. I'm done pretending I know what to do with you.\""},
+      "choices": [
+        {"id": "sit_with_him", "text": {"en": "Sit beside him. Share the edge."}, "next_scene_id": "jackson_08_moment", "effects": {"love_integrity": 5, "temptation": 4}, "emoji": "🪑"},
+        {"id": "stand_apart", "text": {"en": "Stand. Give him space."}, "next_scene_id": "jackson_08_moment_cold", "effects": {"love_integrity": 4}, "emoji": "🧍"}
+      ]
+    },
+    {
+      "id": "jackson_08_moment",
+      "narrative": {"en": "A train roars past below—ancient freight cars screaming through the dark. The rail shakes. The wind almost knocks you off balance.\n\nJackson grabs you. Or you grab him. Suddenly you're pressed together, his arms around you, hearts hammering in the aftermath of almost-falling.\n\n> **Jackson:** \"Shit.\"\n\nHe laughs, breathless, but his hands shake.\n\n> **Jackson:** \"Almost died beautiful there. Classic me.\"\n\nHe doesn't let go. Neither do you.\n\nThe city hums below. His breath warms your skin. In the half-light, his bravado cracks just enough to show something raw underneath—someone who's tired of being alone, even surrounded by people who want him.\n\n> **Jackson:** \"I don't bring people here. Not usually.\"\n\nHis voice drops.\n\n> **Jackson:** \"You're either very lucky or very stupid. Haven't figured out which.\"\n\nThe wind dies down. The silence between you is heavy with everything you haven't said.\n\nHis eyes drop to your lips. His grip shifts—still holding on, but softer now. A question."},
+      "choices": [
+        {"id": "lean_in", "text": {"en": "Lean into him. Let danger become desire."}, "next_scene_id": "jackson_09_morning_after", "effects": {"temptation": 9}, "set_flags": {"jackson_kissed": true, "jackson_intimate": true}, "emoji": "💋"},
+        {"id": "hold_grounded", "text": {"en": "Hold him, but keep it grounded. No jokes."}, "next_scene_id": "jackson_09_morning_after", "effects": {"love_integrity": 7}, "set_flags": {"jackson_vulnerable_moment": true}, "emoji": "🤝"},
+        {"id": "step_back", "text": {"en": "Step back. Laugh it off."}, "next_scene_id": "jackson_09_morning_after", "effects": {"temptation": -2, "love_integrity": 2}, "set_flags": {"jackson_held_at_distance": true}, "emoji": "😅"}
+      ]
+    },
+    {
+      "id": "jackson_08_moment_cold",
+      "narrative": {"en": "Jackson sits on the rail edge, watching the machinery churn below.\n\nYou keep your distance. He notices. Of course he does.\n\n> **Jackson:** \"Got it.\"\n\nHis voice is light, but the crack shows.\n\n> **Jackson:** \"Just a thrill ride for you, huh? Something to feel alive before you go back to your real life.\"\n\nHe laughs, and it sounds like glass breaking.\n\n> **Jackson:** \"I've been that before. The exciting mistake. The story you tell friends. 'Remember when I slummed it in the Verge?'\"\n\nHe stands, brushing off his jacket.\n\n> **Jackson:** \"It's fine. I'm useful for that. Just don't pretend it's anything else.\"\n\nThe train roars past below. He doesn't flinch. He's used to things passing through without staying."},
+      "choices": [
+        {"id": "deny_it", "text": {"en": "\"That's not what this is.\""}, "next_scene_id": "jackson_09_morning_after", "effects": {"temptation": 3, "love_integrity": 2}, "emoji": "😔"},
+        {"id": "confirm_it", "text": {"en": "\"Maybe you're right. Maybe that's all it can be.\""}, "next_scene_id": "jackson_09_morning_after", "effects": {"love_integrity": -3, "temptation": 2}, "set_flags": {"jackson_confirmed_casual": true}, "emoji": "🤷"}
+      ]
+    },
+    {
+      "id": "jackson_09_morning_after",
+      "narrative": {"en": "The next cycle comes with a headache and a mouth full of synthetic regret.\n\nYou're back in your capsule—or maybe in a grimy undercity crash pad, depending on how far the night took you. Either way, the light is wrong and your implants are full of notifications you don't want to read.\n\nOne from Jackson:\n\n> **Jackson:** \"Still breathing? Good. You're tougher than you look.\"\n\nAnd then, softer:\n\n> **Jackson:** \"Last night was... different. I don't know what that means yet. Maybe nothing. Maybe trouble.\"\n\nIf Calvin's route is active, another ping pulses in the corner of your vision:\n\n> **AMOURCORP PRIORITY:** *Anomalous activity detected in your emotional telemetry log. Please report for routine calibration.*\n\n> **Calvin Vance:** *Missed your check-in. Interesting timing.*\n\nTwo worlds. Two men. Both knocking on your implant at once."},
+      "choices": [
+        {"id": "answer_jackson", "text": {"en": "Answer Jackson first. Let Calvin wait."}, "next_scene_id": "jackson_10_ch1_outcome", "effects": {"temptation": 4}, "set_flags": {"calvin_ignored_for_jackson": true}, "emoji": "📱"},
+        {"id": "answer_calvin", "text": {"en": "Answer Calvin first. Let Jackson's message sit."}, "next_scene_id": "jackson_10_ch1_outcome", "effects": {"career_status": 4}, "set_flags": {"jackson_deprioritized": true}, "emoji": "🏢"},
+        {"id": "ignore_both", "text": {"en": "Ignore both. Sit with your hangover and think."}, "next_scene_id": "jackson_10_ch1_outcome", "effects": {"love_integrity": 5}, "set_flags": {"player_introspective": true}, "emoji": "🧘"}
+      ]
+    },
+    {
+      "id": "jackson_10_ch1_outcome",
+      "narrative": {"en": "Later, in the half-light between notifications and exhaustion, your implant compiles another summary:\n\n> **CHAPTER 1: LOW LEVEL, HIGH VOLTAGE – PERSONAL REPORT**\n\n- **Love Integrity:** {{love_integrity_value}}\n- **Temptation Index:** {{temptation_value}}\n- **Career Status:** {{career_status_value}}\n\nUnderneath, the system annotates your night:\n\n- *You descended to Level -22 and survived.*\n- *You [MOVED / REFUSED / SABOTAGED] black-market emotional data.*\n- *You treated Jackson as [A THRILL / A REFUGE / A TOOL / SOMEONE WORTH SAVING].*\n\n━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n\nEchocity has a thousand ways to fall. Tonight, you picked the one with his fingerprints on it.\n\nThe tower offers you rules. The Verge offers you oblivion. Jackson offers you a fast, beautiful way to stop caring which one you choose.\n\n━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n\nSomewhere in the undercity, Jackson files you under: *\"Interesting. Don't lose track.\"*\n\nThe Verge hums below. The tower glows above. And you're balanced on the edge between them, trying to remember which way is up."},
+      "is_checkpoint": true,
+      "choices": [
+        {"id": "continue_jackson", "text": {"en": "Continue: Jackson Chapter 2 – Deeper Debts"}, "next_scene_id": "jackson_ch2_intro", "emoji": "⬇️"},
+        {"id": "switch_to_calvin", "text": {"en": "Switch focus to Calvin for the next cycle."}, "next_scene_id": "calvin_ch2_placeholder", "emoji": "🏢"},
+        {"id": "try_cole", "text": {"en": "Follow the static—answer Cole's encrypted ping."}, "next_scene_id": "cole_ch1_intro", "emoji": "📡"}
+      ]
+    },
+    {
+      "id": "jackson_10_ch1_outcome_early",
+      "narrative": {"en": "You leave the Verge behind.\n\nThe freight lift rattles upward, each level bringing cleaner air and dimmer memories. By the time you reach the surface, Jackson's world feels like a fever dream—half-remembered, half-regretted.\n\n> **CHAPTER 1: LOW LEVEL, HIGH VOLTAGE – PERSONAL REPORT**\n\n- **Love Integrity:** {{love_integrity_value}}\n- **Temptation Index:** {{temptation_value}}\n- **Career Status:** {{career_status_value}}\n\nAnnotation:\n\n- *You descended to Level -22 and walked away.*\n- *You refused to get your hands dirty.*\n- *Jackson remembers you as: someone with principles. Or someone without spine. Time will tell.*\n\n━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n\nYou kept your integrity intact. Or maybe you just couldn't handle the fall.\n\nEither way, the Verge is still there. Jackson is still there. And something tells you this isn't over.\n\n━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"},
+      "is_checkpoint": true,
+      "choices": [
+        {"id": "continue_surface", "text": {"en": "Continue: Return to the surface"}, "next_scene_id": "calvin_ch2_placeholder", "emoji": "⬆️"}
+      ]
+    },
+    {
+      "id": "jackson_premium_01_back_room_confession",
+      "narrative": {"en": "The main room swallows you in light and noise—bass pounding through your ribs, bodies grinding under glitching avatars.\n\n> **Jackson:** \"Come on. Can't hear myself lie out here.\"\n\nHe slips through the crowd and you follow, brushing past hands, neon, the sour-sweet smell of synth-alcohol and fear. The door shuts behind you with a heavy, satisfying thud.\n\nThe back room is smaller than you expected. Low ceiling, cheap sound-dampening foam peeling at the edges. An old couch, a scarred table, a single overhead lamp flickering like it's trying to die and failing.\n\nOut here, the music is just a faint vibration in the walls.\n\nJackson drops onto the couch, legs spread, head tipped back. For a second he just breathes, hood fallen back, throat exposed. Without the club's AR overlays and shadows, he looks... older. Or maybe just more honest.\n\nHe pats the spot beside him.\n\n> **Jackson:** \"Sit. The house therapist is in.\"\n\nThere's a crooked grin there, but it's thinner than usual.\n\nYou sit. The couch springs complain. The air smells like old smoke and expensive cologne someone spilled and never cleaned up.\n\nFor a few beats, neither of you talks.\n\n> **Jackson:** \"You did good out there, you know. Most tower types freeze the first time they see how the sausage gets made. You didn't.\"\n\nHe taps his fingers against his knee, restless energy with nowhere to go.\n\n> **Jackson:** \"So, what'd you come down here for, really? The rush? The credits? Me?\"\n\nHe tries to make it a joke. It doesn't quite land."},
+      "set_flags": {"jackson_backroom_entered": true},
+      "choices": [
+        {"id": "came_for_you", "text": {"en": "\"I came for you.\""}, "next_scene_id": "jackson_premium_01b_for_you", "effects": {"temptation": 6, "love_integrity": 4}, "emoji": "❤️"},
+        {"id": "came_to_forget", "text": {"en": "\"I came to forget the tower for a while.\""}, "next_scene_id": "jackson_premium_01c_forget_tower", "effects": {"love_integrity": 3, "temptation": 3}, "emoji": "🏢"},
+        {"id": "came_chasing", "text": {"en": "\"I came because I don't know who I am when I'm not chasing something.\""}, "next_scene_id": "jackson_premium_01d_chasing", "effects": {"love_integrity": 5, "temptation": 2}, "emoji": "🪞"}
+      ]
+    },
+    {
+      "id": "jackson_premium_01b_for_you",
+      "narrative": {"en": "You hold his gaze.\n\n> **{player_name}:** \"I came for you.\"\n\nHis grin stutters, like a glitch in a too-bright feed.\n\n> **Jackson:** \"Dangerous answer.\"\n\nHe looks away for a second, jaw tightening, then back.\n\n> **Jackson:** \"People don't come *for me.* They come for what I sell. The ride. The story. The 'I did something stupid with a pretty criminal once' memoir.\"\n\nHe leans in, eyes searching your face for the punchline.\n\n> **Jackson:** \"You sure you're not confusing me with the idea of me?\"\n\nYour HUD quietly notes a spike in his heart rate, a tiny tremor in his left hand.\n\nHe's not as casual about this as he wants to be."},
+      "choices": [
+        {"id": "continue_core", "text": {"en": "Let him talk."}, "next_scene_id": "jackson_premium_02_backstory", "emoji": "👂"}
+      ]
+    },
+    {
+      "id": "jackson_premium_01c_forget_tower",
+      "narrative": {"en": "> **{player_name}:** \"I came to forget the tower for a while.\"\n\nHis lips twitch.\n\n> **Jackson:** \"Ah. So I'm the palate cleanser between board meetings.\"\n\nHe says it lightly, but there's a hard edge under the sugar.\n\n> **Jackson:** \"Let me guess. Clean air, glass floors, someone with a perfect jawline who calls you 'asset' instead of 'babe'?\"\n\nYour implant blips a silent warning as it picks up a name hovering in your thoughts. Jackson watches your face and snorts softly.\n\n> **Jackson:** \"Yeah. I've seen that look. You smell like tower oxygen, remember?\"\n\nHe flicks a bottle cap across the table.\n\n> **Jackson:** \"You come down here to remember what it feels like when gravity isn't optional.\""},
+      "choices": [
+        {"id": "continue_core", "text": {"en": "Let him talk."}, "next_scene_id": "jackson_premium_02_backstory", "emoji": "👂"}
+      ]
+    },
+    {
+      "id": "jackson_premium_01d_chasing",
+      "narrative": {"en": "> **{player_name}:** \"I came because I don't know who I am when I'm not chasing something.\"\n\nThe words hang there, too big for the room.\n\nJackson goes very still.\n\n> **Jackson:** \"Yeah.\"\n\nHe laughs once, no humor in it.\n\n> **Jackson:** \"That's the problem with this city. Stand still too long and you notice the rot. So we keep moving. New gig, new body, new fix, new...\"\n\nHe glances at you. Doesn't finish the sentence.\n\n> **Jackson:** \"You're not the only one running from the mirror.\""},
+      "choices": [
+        {"id": "continue_core", "text": {"en": "Let him talk."}, "next_scene_id": "jackson_premium_02_backstory", "emoji": "👂"}
+      ]
+    },
+    {
+      "id": "jackson_premium_02_backstory",
+      "narrative": {"en": "He reaches under the table, pulls out a dented metal flask, takes a slow swallow, then offers it.\n\n> **Jackson:** \"You know what my first job was?\"\n\nYou take the flask or don't. Either way, he keeps talking.\n\n> **Jackson:** \"Runner for a clinic. Thought I was delivering meds to people the system forgot. Looked like a hero gig.\"\n\nHe smiles, sharp and small.\n\n> **Jackson:** \"Took me a few months to realize half the crates were counterfeit treatments sold to desperate people, and the other half were real... redirected from wards where 'low-value' patients got quietly downgraded.\"\n\nHe leans back, eyes on the stained ceiling.\n\n> **Jackson:** \"Whole city's like that. Someone's always running the real stuff past the scanners while everyone else prays over placebos.\"\n\nHis jaw works for a second.\n\n> **Jackson:** \"You do that long enough, something in you breaks. You either crack in half and drown in guilt... or you crack the other way and start thinking, 'If the system's already rigged, might as well get paid.'\"\n\nHe turns his head toward you, eyes suddenly very bare.\n\n> **Jackson:** \"Guess which way I cracked.\""},
+      "choices": [
+        {"id": "cracked_both", "text": {"en": "\"You cracked both ways. You feel guilty and you keep doing it.\""}, "next_scene_id": "jackson_premium_03_both_ways", "effects": {"love_integrity": 6}, "emoji": "💔"},
+        {"id": "system_rotten", "text": {"en": "\"You did what you had to. The system was already rotten.\""}, "next_scene_id": "jackson_premium_03_rotten", "effects": {"temptation": 3}, "emoji": "🤷"},
+        {"id": "chose_money", "text": {"en": "\"You chose getting paid. Don't pretend you hate it that much.\""}, "next_scene_id": "jackson_premium_03_money", "effects": {"temptation": 4, "love_integrity": -2}, "emoji": "💰"}
+      ]
+    },
+    {
+      "id": "jackson_premium_03_both_ways",
+      "narrative": {"en": "He stares at you for a long beat, then laughs—soft, breathless.\n\n> **Jackson:** \"Look at you with the premium psychoanalysis.\"\n\nHe scrubs a hand over his face.\n\n> **Jackson:** \"Yeah. I hate it. I love it. The money, the rush, the being needed—even if it's only because I know where the bodies are buried.\"\n\nHe looks at you like he's not sure if you're another shovel or someone who might finally help him stop digging."},
+      "choices": [
+        {"id": "continue_closing", "text": {"en": "Stay quiet. Let him finish."}, "next_scene_id": "jackson_premium_04_closing", "emoji": "🤫"}
+      ]
+    },
+    {
+      "id": "jackson_premium_03_rotten",
+      "narrative": {"en": "He tilts his head, watching you as if he can see which part of your conscience is talking.\n\n> **Jackson:** \"That's the nice version.\"\n\nA shadow crosses his face.\n\n> **Jackson:** \"The truth is, at some point I could've walked. Didn't. Because the money was good. Because the adrenaline shut up the part of my brain that couldn't sleep.\"\n\nHe smirks weakly.\n\n> **Jackson:** \"You don't have to sand the edges off me, you know. I already live down here.\""},
+      "choices": [
+        {"id": "continue_closing", "text": {"en": "Stay quiet. Let him finish."}, "next_scene_id": "jackson_premium_04_closing", "emoji": "🤫"}
+      ]
+    },
+    {
+      "id": "jackson_premium_03_money",
+      "narrative": {"en": "Something in his eyes hardens, just a little.\n\n> **Jackson:** \"There it is.\"\n\nHe leans forward, elbows on his knees.\n\n> **Jackson:** \"You still want to believe this place is a morality puzzle with a right answer. It's cute. Dangerous, but cute.\"\n\nHe doesn't sound angry—more like he's gauging how much truth you can take before you bolt.\n\n> **Jackson:** \"Yeah, I chose the money. The thrill. The leverage. Guess what? So did half the people up in your glass tower. They just have nicer packaging.\""},
+      "choices": [
+        {"id": "continue_closing", "text": {"en": "Stay quiet. Let him finish."}, "next_scene_id": "jackson_premium_04_closing", "emoji": "🤫"}
+      ]
+    },
+    {
+      "id": "jackson_premium_04_closing",
+      "narrative": {"en": "He exhales, long and slow, some of the tension leaking out with it.\n\n> **Jackson:** \"I don't bring people back here. Not usually.\"\n\nHe rolls the flask between his palms.\n\n> **Jackson:** \"Out there I can be whatever the room needs. Funny, reckless, useful. In here it's just...\"\n\nHe gestures around the sad little room. Himself.\n\n> **Jackson:** \"So if you're here to study the animal in its natural habitat for your tower boss, tell me now. I'll make sure you get good footage.\"\n\nThe joke is too sharp to be safe.\n\nYour implant quietly logs: **TRUST THRESHOLD ADJUSTED**."},
+      "choices": [
+        {"id": "here_for_you", "text": {"en": "\"I'm not here for Calvin. I'm here for you.\""}, "next_scene_id": "jackson_premium_05_outcome", "effects": {"love_integrity": 6, "temptation": 4}, "set_flags": {"jackson_confession_closeness": true}, "emoji": "❤️"},
+        {"id": "deciding_crack", "text": {"en": "\"I'm not studying you. I'm trying to decide which way I'll crack.\""}, "next_scene_id": "jackson_premium_05_outcome", "effects": {"love_integrity": 4, "temptation": 4}, "set_flags": {"jackson_confession_mirror": true}, "emoji": "🪞"},
+        {"id": "maybe_studying", "text": {"en": "\"Maybe I am studying you. But I haven't decided who I'm going to report to yet.\""}, "next_scene_id": "jackson_premium_05_outcome", "effects": {"career_status": 3, "temptation": 5, "love_integrity": -2}, "set_flags": {"jackson_confession_double_agent": true}, "emoji": "🕵️"}
+      ]
+    },
+    {
+      "id": "jackson_premium_05_outcome",
+      "narrative": {"en": "For a moment, the room is perfectly still.\n\nJackson studies your face like he's memorizing it—or like he's trying to decide if you're worth the risk of remembering.\n\nThen something shifts. The armor doesn't drop, but it... loosens. Just a little.\n\n> **Jackson:** \"Huh.\"\n\nHe doesn't say anything else. He doesn't need to.\n\nThe flask passes between you. The silence fills with everything you've both been carrying.\n\nOutside, the club pulses on, oblivious. In here, something has changed—a thread stretched between you, fragile and electric.\n\n> **Jackson:** \"We should get back. Before people start rumors.\"\n\nHe grins, but it's warmer now.\n\n> **Jackson:** \"Or don't. I'm starting to not care what people think.\"\n\n━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n\n**TRUST THRESHOLD: ELEVATED**\n\nJackson will remember this moment. Future scenes will reference the flags you set tonight.\n\n━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"},
+      "set_flags": {"jackson_premium_confession_complete": true},
+      "choices": [
+        {"id": "return_to_club", "text": {"en": "Return to the club."}, "next_scene_id": "jackson_07_rail_edge", "emoji": "🎵"}
+      ]
+    },
+    {
+      "id": "jackson_ch2_backstory_amourcorp",
+      "narrative": {"en": "You and Jackson sit on the edge of a rusted catwalk above a maze of ducts and cables. Echocity's underbelly hums beneath your boots.\n\nHe tosses a nut into the dark and waits for the faint clatter.\n\n> **Jackson:** \"You know I used to wear a badge, right?\"\n\nYou turn. He smirks at your expression.\n\n> **Jackson:** \"What, you thought I was born in a hoodie with 'bad idea' stamped on my forehead?\"\n\nHe pulls a thin, scratched card from his pocket. An old AmourCorp employee ID—your implant struggles to read it, the magstrip long corrupted.\n\nThe photo is younger Jackson. Cleaner. Shorter hair. Dead eyes.\n\n> **Jackson:** \"Junior courier. Data logistics. 'Optimizing emotional resource flows.' That was the tagline.\"\n\nHe rolls the card between his fingers.\n\n> **Jackson:** \"First year, I thought I was a hero. Moving meds, support pings, care packages to people the system 'couldn't quite reach.'\"\n\nHe laughs softly.\n\n> **Jackson:** \"Second year, I realized half the crates were junk. The other half were real treatments rerouted from wards that didn't pay enough to matter.\"\n\nHe flicks the card out into the chasm. It vanishes.\n\n> **Jackson:** \"Third year, someone contacted me on a back channel. Said they could use a runner who knew the routes. No questions, better pay.\"\n\nHe glances at you sideways.\n\n> **Jackson:** \"All I had to do was move a stack of drives out of a secondary storage room. No cameras. No paper trail. Just one more crate on my route.\"\n\nYour HUD whispers warnings: *UNAUTHORIZED TRANSFER – ARCHIVAL UNIT.* Too late.\n\n> **Jackson:** \"Didn't even open it. Delivered it to some ghost in the network. Handle only. No face.\"\n\nHe taps his temple.\n\n> **Jackson:** \"After that, the audits started. Doors that used to open stayed shut. My login stopped working. 'Restructuring,' they called it.\"\n\nHe grins without humor.\n\n> **Jackson:** \"Turns out if you steal from the tower, you'd better be sure whoever you're stealing *for* is worth burning your bridges.\"\n\nA faint line of text dances at the edge of your HUD, almost like someone else is listening:\n\n> *COLE CHANNEL: PASSIVE LISTEN – ACTIVE*\n\nYou realize with a small chill: that \"ghost\" might have been Cole, or someone just like them."},
+      "set_flags": {"jackson_backstory_revealed": true},
+      "choices": [
+        {"id": "regret_helping", "text": {"en": "\"Do you regret helping them?\""}, "next_scene_id": "jackson_ch2_backstory_02", "effects": {"love_integrity": 4}, "set_flags": {"jackson_asked_regret": true}, "emoji": "💔"},
+        {"id": "swapped_theft", "text": {"en": "\"So you swapped one kind of theft for another.\""}, "next_scene_id": "jackson_ch2_backstory_02", "effects": {"temptation": 4}, "set_flags": {"jackson_called_out": true}, "emoji": "🔄"},
+        {"id": "whats_inside", "text": {"en": "\"If that crate started all this, I kind of want to know what was inside.\""}, "next_scene_id": "jackson_ch2_backstory_02", "effects": {"love_integrity": 2, "temptation": 2}, "set_flags": {"jackson_helped_cole_past": true}, "emoji": "📦"}
+      ]
+    },
+    {
+      "id": "jackson_ch2_backstory_02",
+      "narrative": {"en": "Jackson is quiet for a long moment, watching the machinery grind below.\n\n> **Jackson:** \"Regret's expensive. I stopped paying for it years ago.\"\n\nHe pulls out another nut, rolls it between his fingers.\n\n> **Jackson:** \"But sometimes I wonder. That ghost—whoever they were—they knew exactly what they were asking. Knew I'd say yes. Knew I'd burn for it.\"\n\nHe looks at you.\n\n> **Jackson:** \"And they never came back. Never explained. Just... used me and vanished.\"\n\nThe Cole channel flickers in your HUD. Watching. Listening.\n\n> **Jackson:** \"Sound familiar? People up top using people down here, then disappearing when the heat comes?\"\n\nHe laughs, but it's hollow.\n\n> **Jackson:** \"At least I'm honest about what I am now. A criminal. A fixer. Someone who moves things for money.\"\n\nHe stands, stretching.\n\n> **Jackson:** \"But you—you're still figuring it out. Tower or Verge. Clean hands or dirty money. Me or him.\"\n\nHe offers you a hand up.\n\n> **Jackson:** \"No rush. I've got time. The question is whether you do.\""},
+      "choices": [
+        {"id": "continue_jackson", "text": {"en": "Take his hand."}, "next_scene_id": "jackson_ch2_intro", "effects": {"temptation": 3}, "emoji": "🤝"}
+      ]
+    },
+    {
+      "id": "collision_calvin_jackson_verge",
+      "narrative": {"en": "The air in the Verge is thicker than you remember. Smoke, cheap neon, the hum of failing machinery. Jackson walks ahead of you through the narrow service corridor behind the club, one hand in his pocket, the other twirling a data stick.\n\n> **Jackson:** \"Easy hand-off. In and out. Nobody important gets their fingers dirty.\"\n\nYou don't like the way he says *important*.\n\nThe back door of a storage unit hisses open. Inside: crates, a portable server rig, a couple of nervous runners watching you like you're bad news wrapped in nice clothes.\n\nOn the table: a secure case stamped—no, half-scratched—with an AmourCorp logo.\n\nYour stomach drops.\n\n> **You:** \"You stole from the tower again?\"\n\nJackson winks.\n\n> **Jackson:** \"Borrowing. With extreme prejudice.\"\n\nBefore you can respond, your implant jolts.\n\n> **SYSTEM:** *PRIORITY SIGNAL DETECTED. EXECUTIVE PRESENCE INBOUND.*\n\nThe back wall of the storage unit flickers. A holo-projector you didn't know was there boots up, light cutting through the smoky air.\n\nCalvin steps out of the projection like he owns the room, which, technically, he might. Full-body hardlight, tailored suit perfect even in glitchy undercity resolution.\n\nEveryone in the room freezes.\n\n> **Calvin:** \"I'd say I'm surprised, but the odds were always high that if something went missing from my side of the tower, I'd find you at the other end.\"\n\nHis eyes lock onto Jackson, then shift to you.\n\n> **Calvin:** \"[YOUR NAME].\"\n\nJackson laughs, sharp and disbelieving.\n\n> **Jackson:** \"Oh, this is rich.\"\n\nHe gestures vaguely at the holo.\n\n> **Jackson:** \"You bring your boss on a field trip, or is he just really dedicated to workplace follow-up?\""},
+      "condition": {"all_flags": ["calvin_route_active", "jackson_route_active"]},
+      "set_flags": {"collision_triggered": true},
+      "choices": [
+        {"id": "broker_peace", "text": {"en": "\"Everybody calm down. We can make this work for both of you.\""}, "next_scene_id": "collision_broker", "effects": {"love_integrity": 4}, "emoji": "🕊️"},
+        {"id": "side_calvin", "text": {"en": "\"Jackson, stop. If Calvin tracked this, the job is blown.\""}, "next_scene_id": "collision_side_calvin", "effects": {"career_status": 3, "love_integrity": -2}, "set_flags": {"collision_sided_calvin": true}, "emoji": "🏢"},
+        {"id": "push_calvin", "text": {"en": "\"Calvin, cut the feed. You don't control everything down here.\""}, "next_scene_id": "collision_push_calvin", "effects": {"love_integrity": 4, "temptation": 3}, "set_flags": {"collision_pushed_calvin": true}, "emoji": "🔥"}
+      ]
+    },
+    {
+      "id": "collision_broker",
+      "narrative": {"en": "> **You:** \"Enough. If you two tear each other apart, the only ones who win are your competitors and whoever's watching this feed.\"\n\nCalvin's eyes narrow, considering.\n\n> **Calvin:** \"You assume I'm interested in cooperation with someone who steals from my labs.\"\n\nJackson shrugs.\n\n> **Jackson:** \"You assume I'm interested in not stealing from your labs.\"\n\nBut neither walks away. Yet.\n\nThe tension ripples like heat through the room. You feel the point where both of them are about to move—one toward damage control, one toward chaos.\n\nCalvin focuses on the case.\n\n> **Calvin:** \"That unit contains proprietary emotional datasets and architecture notes from my floor. You are going to return it.\"\n\nJackson leans against a crate.\n\n> **Jackson:** \"Sure. For a price.\"\n\nHe flicks the data stick between his fingers.\n\n> **Jackson:** \"Information wants to be free, remember? Or at least *fairly* priced.\"\n\nCalvin smiles, but it doesn't reach his eyes.\n\n> **Calvin:** \"How much for you to walk out of this district and never route a shipment with my logo again?\"\n\nJackson glances at you.\n\n> **Jackson:** \"Depends. Are we pricing in the cost of boredom?\""},
+      "choices": [
+        {"id": "give_calvin", "text": {"en": "\"Give Calvin the case. We walk, no one dies tonight.\""}, "next_scene_id": "collision_outcome_calvin", "effects": {"career_status": 6, "love_integrity": 2}, "set_flags": {"collision_chose_calvin": true, "jackson_trust": -5}, "emoji": "📦"},
+        {"id": "double_cross", "text": {"en": "\"Backup the data for Jackson, then hand over the shell.\""}, "next_scene_id": "collision_outcome_double", "effects": {"temptation": 6, "career_status": -2}, "set_flags": {"collision_double_cross": true, "jackson_trust": 4}, "emoji": "💾"},
+        {"id": "burn_it", "text": {"en": "\"Smash the case. No one gets it.\""}, "next_scene_id": "collision_outcome_burn", "effects": {"love_integrity": 6, "career_status": -4}, "set_flags": {"collision_burn_it": true, "jackson_trust": 2, "calvin_resentment": true}, "emoji": "🔥"}
+      ]
+    },
+    {
+      "id": "collision_side_calvin",
+      "narrative": {"en": "Jackson's grin drops a fraction.\n\n> **Jackson:** \"Wow. Tower first, huh?\"\n\nCalvin's holo tilts, amused.\n\n> **Calvin:** \"At least someone here understands long-term thinking.\"\n\nThe runners in the room shift nervously. Jackson's trust flag takes a hit—you can feel it in the way he looks at you, like you've just become a different category of person.\n\nBut Calvin... Calvin looks almost pleased.\n\n> **Calvin:** \"Hand over the case. Consider this a lesson in choosing your allies wisely.\"\n\nJackson weighs his options. For a moment, you think he might run. Or fight.\n\nInstead, he shrugs.\n\n> **Jackson:** \"Fine. Take your toys. But remember—I know your routes now. And I know who you bring to the Verge.\"\n\nHe slides the case across the table. Calvin's holo flickers as the data transfers.\n\n> **Calvin:** \"Noted. {player_name}, we'll discuss this later. Privately.\"\n\nThe holo winks out. The room exhales."},
+      "set_flags": {"collision_complete": true, "jackson_trust_damaged": true},
+      "choices": [
+        {"id": "continue_collision", "text": {"en": "Continue..."}, "next_scene_id": "collision_aftermath", "emoji": "▶️"}
+      ]
+    },
+    {
+      "id": "collision_push_calvin",
+      "narrative": {"en": "Calvin's expression cools.\n\n> **Calvin:** \"You've picked interesting company.\"\n\nJackson flashes you a quick look—somewhere between impressed and worried.\n\n> **Jackson:** \"Told you the tower boy had hands everywhere.\"\n\nBut you've drawn a line. Calvin notices. The runners notice. The whole room recalibrates.\n\n> **Calvin:** \"This isn't over. The data will return to me, one way or another. The only question is what it costs everyone in this room.\"\n\nHis holo flickers, destabilizing.\n\n> **Calvin:** \"Choose carefully, {player_name}. Some bridges don't rebuild.\"\n\nThe projection cuts out. The room is silent except for the hum of machinery.\n\nJackson looks at you with something new in his eyes.\n\n> **Jackson:** \"Well. That was either very brave or very stupid.\"\n\nHe grins.\n\n> **Jackson:** \"I like both.\""},
+      "set_flags": {"collision_complete": true, "calvin_trust_damaged": true},
+      "choices": [
+        {"id": "continue_collision", "text": {"en": "Continue..."}, "next_scene_id": "collision_aftermath", "emoji": "▶️"}
+      ]
+    },
+    {
+      "id": "collision_outcome_calvin",
+      "narrative": {"en": "The case slides across the table to Calvin's projection.\n\nJackson watches it go with an expression you can't quite read—disappointment, maybe. Or just resignation.\n\n> **Jackson:** \"Right. Good to know where we stand.\"\n\nCalvin's holo flickers with satisfaction.\n\n> **Calvin:** \"Smart choice. The data will be secure. And you...\"\n\nHe looks at you.\n\n> **Calvin:** \"...you've shown you can prioritize. That's valuable.\"\n\nThe projection winks out. The runners scatter. Jackson is left standing in the dim storage room, watching you.\n\n> **Jackson:** \"You picked the tower. I get it. But don't pretend this was about the right thing. This was about the safe thing.\"\n\nHe turns away.\n\n> **Jackson:** \"I'll remember.\""},
+      "set_flags": {"collision_complete": true, "jackson_trust_broken": true, "calvin_trust_elevated": true},
+      "choices": [
+        {"id": "continue_collision", "text": {"en": "Continue..."}, "next_scene_id": "collision_aftermath", "emoji": "▶️"}
+      ]
+    },
+    {
+      "id": "collision_outcome_double",
+      "narrative": {"en": "Your fingers move fast—data stick to the case, backup initiated, shell handed over.\n\nCalvin's holo accepts the case, unaware that the real prize is already copying to Jackson's drive.\n\n> **Calvin:** \"Thank you for being reasonable.\"\n\nHis projection winks out. Jackson watches you with new eyes.\n\n> **Jackson:** \"You just double-crossed AmourCorp. For me.\"\n\nHe sounds almost surprised.\n\n> **Jackson:** \"That's either the start of a beautiful partnership or the worst decision you've ever made.\"\n\nHe pockets the data stick.\n\n> **Jackson:** \"Either way... I won't forget.\"\n\nSomewhere in the tower, Calvin will eventually discover the shell is empty. But that's a problem for later.\n\nRight now, you've chosen a side. The Verge remembers."},
+      "set_flags": {"collision_complete": true, "jackson_deep_trust": true, "calvin_betrayed": true},
+      "choices": [
+        {"id": "continue_collision", "text": {"en": "Continue..."}, "next_scene_id": "collision_aftermath", "emoji": "▶️"}
+      ]
+    },
+    {
+      "id": "collision_outcome_burn",
+      "narrative": {"en": "The case shatters under your foot.\n\nData chips scatter like broken teeth. The portable server sparks and dies. Whatever was inside—those emotional datasets, those architecture notes—is gone.\n\nCalvin's holo freezes.\n\n> **Calvin:** \"What did you just do?\"\n\nJackson stares at you, half-laughing.\n\n> **Jackson:** \"They just burned it. All of it.\"\n\nCalvin's expression goes cold.\n\n> **Calvin:** \"You have no idea what you've destroyed. That data was... irreplaceable.\"\n\nHis holo flickers, destabilizing with what might be rage.\n\n> **Calvin:** \"This isn't over.\"\n\nThe projection cuts out. The room is silent.\n\nJackson turns to you, something like respect in his eyes.\n\n> **Jackson:** \"You tried to erase the evidence. Brave. Futile. But brave.\"\n\nThe Cole channel flickers in your HUD:\n\n> *COLE: \"Interesting choice. We should talk.\"*\n\nYou've made enemies on both sides. But you've also made a statement: some things shouldn't belong to anyone."},
+      "set_flags": {"collision_complete": true, "cole_interested": true, "calvin_enemy": true},
+      "choices": [
+        {"id": "continue_collision", "text": {"en": "Continue..."}, "next_scene_id": "collision_aftermath", "emoji": "▶️"}
+      ]
+    },
+    {
+      "id": "collision_aftermath",
+      "narrative": {"en": "The storage room empties. The runners vanish into the Verge's shadows. Jackson lingers by the door.\n\n> **Jackson:** \"Well. That was... something.\"\n\nHe studies you for a long moment.\n\n> **Jackson:** \"You're not what I expected. Not tower. Not Verge. Something in between.\"\n\nHe pushes off the doorframe.\n\n> **Jackson:** \"I don't know if that makes you dangerous or useful. Maybe both.\"\n\nYour HUD compiles a quiet summary:\n\n> *COLLISION EVENT: RECORDED*\n> *CALVIN STATUS: [VARIES BY CHOICE]*\n> *JACKSON STATUS: [VARIES BY CHOICE]*\n> *COLE CHANNEL: MONITORING*\n\nThe Verge hums around you, indifferent to the drama that just played out. But somewhere in the tower, someone is recalculating. And somewhere in the static, someone is watching.\n\n> **Jackson:** \"Come on. I need a drink. And you need to figure out what you just became.\"\n\nHe walks into the neon dark. You follow—or don't.\n\nEither way, nothing is the same."},
+      "is_checkpoint": true,
+      "choices": [
+        {"id": "follow_jackson", "text": {"en": "Follow Jackson."}, "next_scene_id": "jackson_ch2_intro", "effects": {"temptation": 2}, "emoji": "⬇️"},
+        {"id": "return_tower", "text": {"en": "Return to the tower."}, "next_scene_id": "calvin_ch2_confront_undercity", "effects": {"career_status": 2}, "emoji": "🏢"},
+        {"id": "contact_cole", "text": {"en": "Open Cole's channel."}, "next_scene_id": "cole_ch1_intro", "effects": {"love_integrity": 2}, "emoji": "📡"}
+      ]
+    },
+    {
+      "id": "jackson_ch2_intro",
+      "narrative": {"en": "The Verge feels different when you come back knowing you're not just visiting.\n\nThe air is heavier. The lights a little harsher. Or maybe that's just the way your implant keeps flagging every corner with **RISK: NORMALIZED**.\n\nJackson is late.\n\nYou're in a half-collapsed loading bay behind the club, alone except for a stack of cracked crates and a mural someone spray-painted over a decayed AmourCorp poster. The slogan underneath bleeds through in places:\n\n> *WE OPTIMIZE YOUR EMOTIONS.*\n\nA ratty holo-screen above the door flickers with bootleg Heartline feeds—faces blurred, metrics sharp.\n\nYour implant buzzes.\n\n> **INCOMING LOCAL CHANNEL: UNKNOWN (VERGE NODE)**\n\nYou accept.\n\nA voice like gravel and silk purrs in your ear.\n\n> **Unknown:** \"You must be the tower stray.\"\n\nA shadow detaches from the broken doorway opposite you.\n\nThey're tall, wrapped in a coat that probably cost more than this whole block and less than one AmourCorp cocktail. Lines of old, half-legal implants trace their throat and wrists.\n\nYour HUD scrambles and finally tags:\n\n> **MARA KEST – DISTRICT OPERATOR (LEVEL -22)**\n> *ALIAS: KESTREL*\n> *ASSOCIATIONS: CRIMINAL SYNDICATE – 'THE LEDGER'*\n> *STATUS: OWNS MORE PEOPLE THAN PROPERTY*\n\n> **Mara:** \"Jackson said you were smarter than you look.\"\n\nYou're not sure if that's a compliment.\n\n> **You:** \"And you are?\"\n\nShe smiles, all teeth and amusement.\n\n> **Mara:** \"The one who sends him invoices.\""},
+      "set_flags": {"jackson_ch2_started": true, "mara_introduced": true},
+      "choices": [
+        {"id": "continue_mara", "text": {"en": "Continue..."}, "next_scene_id": "jackson_ch2_intro_02", "emoji": "▶️"}
+      ]
+    },
+    {
+      "id": "jackson_ch2_intro_02",
+      "narrative": {"en": "Heavy footsteps echo. Jackson slides in through a side door, hood half-down, eyes already scanning.\n\n> **Jackson:** \"You started without me? Rude.\"\n\nMara doesn't look at him yet.\n\n> **Mara:** \"You're late.\"\n\nHe shrugs.\n\n> **Jackson:** \"I'm alive. We calling that a wash?\"\n\nNow she looks at him. The temperature in the room drops a few degrees.\n\n> **Mara:** \"You're alive because I'm very good at math and very patient.\"\n\nShe flicks her wrist. A holo-ledger appears between the three of you, numbers stacking like a slow avalanche.\n\n> **Mara:** \"This is what you owe.\"\n\nYour implant zooms in whether you want it to or not:\n\n> *DEBT: 187,430 CREDITS*\n> *INTEREST: COMPOUND, FAVOR-BASED*\n> *RISK CATEGORY: ENTERTAINING BUT EXPENDABLE*\n\nMara tilts her head.\n\n> **Mara:** \"And this—\"\n\nA new line appears.\n\n> *ASSOCIATE: [YOUR NAME]*\n> *STATUS: UNPRICED*\n\n> **Mara:** \"—is what I'm deciding what to do with.\"\n\nJackson steps between you and the ledger, too quickly to play cool.\n\n> **Jackson:** \"They're not part of this.\"\n\nMara arches an eyebrow.\n\n> **Mara:** \"They ran your routes. Sat in my clubs. Touched my shipments. That makes them *very* much part of this.\"\n\nShe turns her attention fully on you.\n\n> **Mara:** \"Tell me, tower stray. Why are you still down here?\""},
+      "choices": [
+        {"id": "moral_fire", "text": {"en": "\"Because I don't like watching from above while people like you decide who lives badly and who just dies.\""}, "next_scene_id": "jackson_ch2_intro_03", "effects": {"love_integrity": 4}, "set_flags": {"mara_saw_idealism": true}, "emoji": "🔥"},
+        {"id": "dark_humor", "text": {"en": "\"Because Jackson keeps texting 'just one more job' like it's a joke.\""}, "next_scene_id": "jackson_ch2_intro_03", "effects": {"temptation": 2}, "set_flags": {"mara_saw_humor": true}, "emoji": "😏"},
+        {"id": "honest_cage", "text": {"en": "\"Because the tower is a cage made of glass and this is... at least honest about it.\""}, "next_scene_id": "jackson_ch2_intro_03", "effects": {"love_integrity": 3, "temptation": 2}, "set_flags": {"mara_saw_honesty": true}, "emoji": "🪞"}
+      ]
+    },
+    {
+      "id": "jackson_ch2_intro_03",
+      "narrative": {"en": "Mara processes your answer, something flickering behind her eyes.\n\nShe dismisses the holo for a moment and steps closer.\n\n> **Mara:** \"Here's how this works. Jackson owes me. A lot. He pays in credits, favors, and interesting company.\"\n\nHer gaze trails over you like a scanner.\n\n> **Mara:** \"You could be all three.\"\n\nJackson huffs.\n\n> **Jackson:** \"Mara—\"\n\nShe holds up a hand. He shuts up.\n\n> **Mara:** \"Relax. I'm not in the habit of wasting useful assets. I am in the habit of clarifying terms.\"\n\nThe ledger reappears, but now there's a branching tree:\n\n- Jackson's debt in red.\n- A few smaller nodes in grey.\n- One pulsing, unnamed node in white.\n\nYou.\n\n> **Mara:** \"Option one: you stay a tourist. Come down when you want a story, go back up when it gets scary. Jackson pays his tab the old-fashioned way. Risky. Slow.\"\n\nA red line thickens.\n\n> **Mara:** \"Option two: you start taking jobs that are worth more than his pretty face.\"\n\nA path extends from your node to Jackson's, numbers recalculating.\n\n> **Mara:** \"Option three: you walk away from all of this right now. And I adjust his expected lifespan accordingly.\"\n\nShe doesn't blink when she says it.\n\nJackson's jaw tightens. He doesn't look at you."},
+      "choices": [
+        {"id": "continue_mara_exit", "text": {"en": "Continue..."}, "next_scene_id": "jackson_ch2_intro_04", "emoji": "▶️"}
+      ]
+    },
+    {
+      "id": "jackson_ch2_intro_04",
+      "narrative": {"en": "> **Mara:** \"I don't need your answer today. Chapter Two is long. But understand this—\"\n\nThe holo fades, leaving only the faint echo of the numbers in your HUD.\n\n> **Mara:** \"You're on my books now. One way or another, you will balance.\"\n\nShe turns to Jackson.\n\n> **Mara:** \"Get them out of my loading bay. Try not to die on the way.\"\n\nShe walks back into the dark, steps precise, coat whispering against the concrete.\n\nSilence stretches a beat too long.\n\nJackson lets out a breath he'd been holding.\n\n> **Jackson:** \"So... welcome to Deeper Debts.\"\n\nHe looks at you, voice softer.\n\n> **Jackson:** \"You don't have to stay in this. But if you do, we're past the 'fun night out' part.\"\n\nYour implant hums: *JACKSON CH2 – ROUTE CONFIRMED.*"},
+      "choices": [
+        {"id": "pay_together", "text": {"en": "\"Then we pay it off. Together.\""}, "next_scene_id": "jackson_ch2_backstory_amourcorp", "effects": {"love_integrity": 6}, "set_flags": {"jackson_debt_pact": true, "jackson_trust": 5}, "emoji": "🤝"},
+        {"id": "conditional_help", "text": {"en": "\"I'll help... as long as the jobs don't cross certain lines.\""}, "next_scene_id": "jackson_ch2_backstory_amourcorp", "effects": {"love_integrity": 4, "temptation": 2}, "set_flags": {"jackson_conditional_help": true}, "emoji": "⚖️"},
+        {"id": "self_first", "text": {"en": "\"I don't owe her anything. I might still owe you.\""}, "next_scene_id": "jackson_ch2_backstory_amourcorp", "effects": {"temptation": 4, "love_integrity": -1}, "set_flags": {"jackson_self_first": true, "jackson_trust": 2}, "emoji": "😎"}
+      ]
+    },
+    {
+      "id": "jackson_ch2_placeholder",
+      "narrative": {"en": "🚧 **Chapter 2 continues...**\n\nMara's ledger hangs over everything now. The jobs will get harder. The lines will blur.\n\n━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n\nCheck back soon for new content.\n\nUse /profile to see your current stats and flags."},
+      "is_checkpoint": true,
+      "choices": []
+    },
+    {
+      "id": "cole_ch1_placeholder",
+      "narrative": {"en": "The encrypted ping pulses in your HUD. Cole is waiting.\n\nYou take a breath and open the channel..."},
+      "choices": [
+        {"id": "open_cole", "text": {"en": "Enter Cole's world."}, "next_scene_id": "cole_ch1_intro", "emoji": "📡"}
+      ]
+    }
+  ]
+}
